@@ -28,15 +28,63 @@ const projects = [
   },
   {
     num: "05",
-    title: "Multi-Agent AI Automation",
+    title: "Database Communicator RAG",
+    stack: "Gemini API · ChromaDB · Sentence Transformers · SQLAlchemy · MySQL · Pandas",
+    desc: "RAG-based NL-to-SQL system converting plain-English questions into optimized SQL queries. Semantic similarity caching via ChromaDB (~5ms hits), dynamic schema population, and auto CSV export.",
+  },
+  {
+    num: "06",
+    title: "Multi-Agent AI Automation Platform",
     stack: "LangGraph · LangChain · Ollama · FastAPI · WhatsApp API · Telegram Bot · PostgreSQL",
     desc: "Graph-based multi-agent framework with 4 node agents connected to WhatsApp/Telegram bots. Users send commands and receive chart images directly in chat. 80% API cost reduction.",
   },
   {
-    num: "06",
+    num: "07",
     title: "AI Food Nutrition Analyzer",
     stack: "FastAPI · Gemini 2.0 Flash Vision · AWS EC2 · RDS · Scikit-learn · XGBoost",
     desc: "Backend for Android app — food image analysis via Gemini Vision AI returning per-dish nutrition breakdowns. 1,000+ daily requests at sub-800ms response time.",
+  },
+  {
+    num: "08",
+    title: "ML Prediction & Analytics",
+    stack: "Scikit-learn · XGBoost · Pandas · NumPy · SHAP · Matplotlib · Seaborn · FastAPI",
+    desc: "End-to-end ML workflows: EDA, feature engineering, hyperparameter tuning with GridSearchCV, k-fold cross-validation, and SHAP interpretability for churn prediction & demand forecasting.",
+  },
+  {
+    num: "09",
+    title: "Power BI Analytics Dashboards",
+    stack: "Power BI · DAX · Python · PostgreSQL · Pandas · NumPy · Direct Query",
+    desc: "College attendance tracking & inventory management dashboards with drill-through views, live PostgreSQL Direct Query, DAX-calculated KPIs, and automated email alerts.",
+  },
+  {
+    num: "10",
+    title: "Secure Microservice API",
+    stack: "FastAPI · Celery · Redis · SQLAlchemy · PostgreSQL · Alembic · Pytest · GitLab CI",
+    desc: "Production FastAPI microservice with OAuth2 + JWT, refresh token rotation, Celery + Redis async tasks, 85%+ test coverage, and dual-database support with zero-downtime migrations.",
+  },
+  {
+    num: "11",
+    title: "Full-Stack E-Commerce with Finance",
+    stack: "Django · PostgreSQL · Pandas · OpenPyXL · Nginx · Gunicorn · Ubuntu",
+    desc: "Production e-commerce app with GST invoicing, profit tracking, automated Excel reports. Database optimization achieved 4.3× API speedup (820ms → 190ms).",
+  },
+  {
+    num: "12",
+    title: "Multi-Site Scraping & Automation",
+    stack: "Selenium · BeautifulSoup · Pandas · n8n · SQLite · Proxy Rotation · Stealth",
+    desc: "Automated scraping framework targeting 12+ US portals. 500K+ records/week with anti-detection strategies, 95%+ uptime, and n8n workflow orchestration.",
+  },
+  {
+    num: "13",
+    title: "Amazon Scraper — ETL Pipeline",
+    stack: "Selenium · Pandas · MySQL · WebDriverWait · Jupyter · CSV",
+    desc: "End-to-end Amazon.in laptop scraper with multi-page pagination, stale element recovery, 64KB+ structured dataset extraction, and complete ETL to MySQL.",
+  },
+  {
+    num: "14",
+    title: "Pandas Data Visualization & EDA",
+    stack: "Pandas · NumPy · Matplotlib · Seaborn · SciPy · Jupyter · Statistical Analysis",
+    desc: "Comprehensive EDA workflow — groupby aggregations, pivot tables, multi-dimensional visualizations (heatmaps, pair plots, facet grids), and statistical analysis with actionable insights.",
   },
 ];
 

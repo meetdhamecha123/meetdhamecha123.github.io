@@ -48,11 +48,11 @@ const HeroSection = () => {
 
             {/* Links */}
             <div className="flex gap-3 opacity-0 animate-fade-up" style={{ animationDelay: "300ms" }}>
-              <a href="https://github.com/meet-dhamecha" target="_blank" rel="noreferrer"
+              <a href="https://github.com/meetdhamecha123" target="_blank" rel="noreferrer"
                 className="flex items-center gap-2 px-5 py-2.5 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-all duration-200 text-sm font-medium active:scale-[0.97]">
                 <Github className="w-4 h-4" /> GitHub
               </a>
-              <a href="https://linkedin.com/in/meet-dhamecha" target="_blank" rel="noreferrer"
+              <a href="https://linkedin.com/in/meet-dhamecha-616021236" target="_blank" rel="noreferrer"
                 className="flex items-center gap-2 px-5 py-2.5 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-all duration-200 text-sm font-medium active:scale-[0.97]">
                 <Linkedin className="w-4 h-4" /> LinkedIn
               </a>

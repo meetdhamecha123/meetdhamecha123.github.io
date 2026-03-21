@@ -18,11 +18,11 @@ const ContactSection = () => {
               className="flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-90 transition-all active:scale-[0.97]">
               <Mail className="w-4 h-4" /> Email Me
             </a>
-            <a href="https://github.com/meet-dhamecha" target="_blank" rel="noreferrer"
+            <a href="https://github.com/meetdhamecha123" target="_blank" rel="noreferrer"
               className="flex items-center gap-2 px-6 py-3 rounded-lg bg-secondary text-secondary-foreground font-medium hover:bg-border transition-all active:scale-[0.97]">
               <Github className="w-4 h-4" /> GitHub
             </a>
-            <a href="https://linkedin.com/in/meet-dhamecha" target="_blank" rel="noreferrer"
+            <a href="https://linkedin.com/in/meet-dhamecha-616021236" target="_blank" rel="noreferrer"
               className="flex items-center gap-2 px-6 py-3 rounded-lg bg-secondary text-secondary-foreground font-medium hover:bg-border transition-all active:scale-[0.97]">
               <Linkedin className="w-4 h-4" /> LinkedIn
             </a>
