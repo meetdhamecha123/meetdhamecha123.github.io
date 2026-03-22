@@ -5,7 +5,6 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 const stats = [
   { value: "14", label: "Production Projects" },
   { value: "2+", label: "Years Experience" },
-  { value: "500K+", label: "Records/Week" },
   { value: "80%", label: "LLM Cost Saved" },
   { value: "100×", label: "Query Speedup" },
   { value: "30K+", label: "Lines of Code" },
