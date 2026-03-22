@@ -39,7 +39,7 @@ const HeroSection = () => {
       <div className="max-w-6xl mx-auto w-full relative z-10">
         <div className="grid md:grid-cols-[1fr_auto] gap-10 md:gap-14 items-center">
           {/* Left content */}
-          <div className="space-y-6">
+          <div className="space-y-6 order-2 md:order-1">
             <div className={`space-y-4 ${isVisible ? "animate-fade-up" : "opacity-0"}`}>
               <div className="flex items-center gap-2">
                 <Sparkles className="w-4 h-4 text-primary" />
@@ -95,16 +95,16 @@ const HeroSection = () => {
           </div>
 
           {/* Profile image */}
-          <div className={`hidden md:block ${isVisible ? "animate-fade-in" : "opacity-0"}`} style={{ animationDelay: "200ms" }}>
+          <div className={`order-1 md:order-2 mb-4 md:mb-0 flex justify-center w-full md:block ${isVisible ? "animate-fade-in" : "opacity-0"}`} style={{ animationDelay: "200ms" }}>
             <div className="relative animate-float-slow">
-              <div className="w-72 h-72 rounded-2xl overflow-hidden glow ring-1 ring-primary/30">
+              <div className="w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 rounded-2xl overflow-hidden glow ring-1 ring-primary/30 mx-auto md:mx-0">
                 <img src={profileImg} alt="Meet Dhamecha" className="w-full h-full object-cover" />
               </div>
-              <div className="absolute -bottom-3 -right-3 w-72 h-72 rounded-2xl border border-primary/20 -z-10" />
+              <div className="absolute -bottom-3 -right-3 w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 rounded-2xl border border-primary/20 -z-10 hidden sm:block" />
               {/* Experience badge */}
-              <div className="absolute -bottom-4 -left-4 px-4 py-2 rounded-lg bg-card border border-primary/30 shadow-xl shadow-black/20">
-                <div className="text-primary font-mono text-lg font-bold">2+ Years</div>
-                <div className="text-muted-foreground text-xs">Experience</div>
+              <div className="absolute -bottom-2 -left-2 sm:-bottom-4 sm:-left-4 px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg bg-card border border-primary/30 shadow-xl shadow-black/20">
+                <div className="text-primary font-mono text-sm sm:text-lg font-bold">2+ Years</div>
+                <div className="text-muted-foreground text-[10px] sm:text-xs">Experience</div>
               </div>
             </div>
           </div>
