@@ -1,16 +1,22 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, Phone, MessageSquare, Download } from "lucide-react";
 
 const ContactSection = () => {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section id="contact" className="section-padding bg-card/50" ref={ref}>
-      <div className="max-w-3xl mx-auto text-center">
+    <section id="contact" className="section-padding bg-card/50 relative overflow-hidden" ref={ref}>
+      {/* Background orb */}
+      <div className="animated-orb w-64 h-64 bg-primary/20 top-1/4 -left-16" style={{ animationDelay: "3s" }} />
+
+      <div className="max-w-3xl mx-auto text-center relative z-10">
         <div className={`space-y-6 ${isVisible ? "animate-fade-up" : "opacity-0"}`}>
-          <h2 className="text-3xl font-bold tracking-tight">Let's Build Something</h2>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/25 text-primary text-xs font-mono font-medium mb-2">
+            <MessageSquare className="w-3 h-3" /> Open to Opportunities
+          </div>
+          <h2 className="text-4xl font-bold tracking-tight">Let's Build Something<br /><span className="text-gradient">Amazing Together</span></h2>
           <p className="text-muted-foreground text-lg max-w-lg mx-auto">
-            Open to backend engineering, AI/LLM engineering, and full-stack Python roles. Let's connect.
+            Open to backend engineering, AI/LLM engineering, and full-stack Python roles. Let's connect and create impactful solutions.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 pt-4">
@@ -26,10 +32,15 @@ const ContactSection = () => {
               className="flex items-center gap-2 px-6 py-3 rounded-lg bg-secondary text-secondary-foreground font-medium hover:bg-border transition-all active:scale-[0.97] hover-lift">
               <Linkedin className="w-4 h-4" /> LinkedIn
             </a>
+            <a href="/Meet_Dhamecha_Resume.pdf" download
+              className="flex items-center gap-2 px-6 py-3 rounded-lg bg-secondary text-secondary-foreground font-medium hover:bg-border transition-all active:scale-[0.97] hover-lift">
+              <Download className="w-4 h-4" /> Resume PDF
+            </a>
           </div>
 
           <div className={`flex flex-wrap justify-center gap-6 pt-8 text-sm text-muted-foreground ${isVisible ? "animate-fade-up" : "opacity-0"}`} style={{ animationDelay: "150ms" }}>
-            <span className="flex items-center gap-1.5"><Phone className="w-3.5 h-3.5" /> +91 8401447120</span>
+            <span className="flex items-center gap-1.5"><Phone className="w-3.5 h-3.5" /> (+91) 8401447120</span>
+            <span className="flex items-center gap-1.5"><Mail className="w-3.5 h-3.5" /> meetdhamecha82@gmail.com</span>
             <span className="flex items-center gap-1.5"><MapPin className="w-3.5 h-3.5" /> Surat, Gujarat, India</span>
           </div>
         </div>

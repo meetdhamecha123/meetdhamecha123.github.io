@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Meet Dhamecha — Senior Python & AI/LLM Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════
+   DESIGN SYSTEM
+═══════════════════════════════════════════════ */
+:root {
+  --c-ink:       #0d1b2a;
+  --c-navy:      #112240;
+  --c-blue:      #1b3a6b;
+  --c-mid:       #2563a8;
+  --c-sky:       #3b82c4;
+  --c-accent:    #b8860b;
+  --c-gold:      #d4a017;
+  --c-goldlt:    #f0c040;
+  --c-text:      #1e293b;
+  --c-sub:       #3d5166;
+  --c-muted:     #5a7184;
+  --c-light:     #94aec4;
+  --c-rule:      #c8d8e8;
+  --c-bg:        #f4f7fb;
+  --c-card:      #ffffff;
+  --c-ice:       #eaf2fb;
+  --c-sidebg:    #0e1f38;
+  --c-sidemid:   #162d4a;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+}
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body {
+  font-family: var(--font-body);
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--c-text);
+  background: #dde4ee;
+}
+
+/* ═══ PAGE SHELL ═══ */
+.page {
+  width: 210mm;
+  margin: 0 auto;
+  background: var(--c-card);
+  position: relative;
+  overflow: hidden;
+}
+@media screen {
+  .page { margin: 20px auto; box-shadow: 0 20px 60px rgba(0,0,0,.25); }
+}
+@media print {
+  body { background: white; }
+  .page { margin: 0; box-shadow: none; width: 100%; }
+  @page { size: A4; margin: 0; }
+}
+
+/* ═══ LAYOUT: SIDEBAR + MAIN ═══ */
+.layout { display: flex; min-height: 297mm; }
+.sidebar {
+  width: 71mm;
+  flex-shrink: 0;
+  background: var(--c-sidebg);
+  display: flex;
+  flex-direction: column;
+}
+.main-col {
+  flex: 1;
+  min-width: 0;
+  background: white;
+}
+
+/* ═══════════════════════════════════════════════
+   SIDEBAR
+═══════════════════════════════════════════════ */
+/* Hero block */
+.sb-hero {
+  background: linear-gradient(160deg, #0a1628 0%, #1a3a6e 55%, #0e2348 100%);
+  padding: 28px 20px 22px;
+  text-align: center;
+  position: relative;
+  border-bottom: 1px solid rgba(212,160,23,.3);
+}
+.sb-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% -10%, rgba(59,130,196,.18) 0%, transparent 65%);
+}
+.photo-frame {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 14px;
+}
+.photo-frame::before {
+  content:'';
+  position:absolute;
+  inset:-4px;
+  border-radius:50%;
+  background: conic-gradient(var(--c-goldlt) 0deg, var(--c-gold) 90deg, var(--c-accent) 180deg, var(--c-gold) 270deg, var(--c-goldlt) 360deg);
+  z-index:0;
+}
+.photo-frame::after {
+  content:'';
+  position:absolute;
+  inset:-1px;
+  border-radius:50%;
+  background: var(--c-sidebg);
+  z-index:1;
+}
+.photo-frame img {
+  display:block;
+  width:100px; height:100px;
+  border-radius:50%;
+  object-fit:cover;
+  position:relative;
+  z-index:2;
+  border:3px solid var(--c-sidebg);
+}
+.sb-name {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.15;
+  letter-spacing: .3px;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 6px;
+}
+.sb-role {
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--c-gold);
+  position: relative;
+  z-index: 1;
+  line-height: 1.7;
+}
+.sb-exp-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(212,160,23,.15);
+  border: 1px solid rgba(212,160,23,.4);
+  border-radius: 20px;
+  padding: 4px 12px;
+  margin-top: 10px;
+  font-size: 8.5px;
+  font-weight: 600;
+  color: var(--c-goldlt);
+  position: relative;
+  z-index: 1;
+}
+.sb-exp-badge::before { content:'✦'; font-size:8px; }
+
+/* Sidebar sections */
+.sb-body { padding: 16px 18px 20px; flex: 1; }
+.sb-sec { margin-bottom: 18px; }
+.sb-sec-title {
+  font-size: 7.5px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--c-gold);
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(212,160,23,.25);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.sb-sec-title::before { content:''; display:block; width:4px; height:4px; background:var(--c-gold); border-radius:50%; }
+
+/* Contact */
+.contact-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 8.5px;
+  color: #9bbbd8;
+  line-height: 1.45;
+}
+.ci { font-size: 12px; color: var(--c-gold); flex-shrink:0; line-height:1; margin-top:1px; }
+
+/* Skills */
+.skill-cat { margin-bottom: 11px; }
+.skill-cat-name {
+  font-size: 8px;
+  font-weight: 600;
+  color: var(--c-sky);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+.tags { display:flex; flex-wrap:wrap; gap:3px; }
+.tag {
+  font-size: 7.5px;
+  padding: 2.5px 7px;
+  border-radius: 3px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+.tag-core   { background: rgba(37,99,168,.25); border:1px solid rgba(59,130,196,.35); color:#a8ccee; }
+.tag-ai     { background: rgba(180,120,10,.2); border:1px solid rgba(212,160,23,.3); color:#e8c870; }
+.tag-data   { background: rgba(20,120,80,.2); border:1px solid rgba(30,160,100,.3); color:#7dd8b0; }
+.tag-infra  { background: rgba(120,40,160,.2); border:1px solid rgba(160,60,200,.3); color:#c9a0e8; }
+
+/* Education */
+.edu-deg   { font-size:9.5px; font-weight:600; color:#e8f0fb; margin-bottom:3px; line-height:1.3; }
+.edu-inst  { font-size:8px; color:#7899bc; line-height:1.4; margin-bottom:2px; }
+.edu-year  { font-size:8px; color:var(--c-gold); font-weight:600; font-family:var(--font-mono); }
+.gpa-bar   { height:3px; background:rgba(255,255,255,.1); border-radius:2px; margin-top:6px; overflow:hidden; }
+.gpa-fill  { height:100%; background:linear-gradient(to right, var(--c-accent), var(--c-goldlt)); width:85%; border-radius:2px; }
+
+/* Strengths */
+.strength-item {
+  display:flex; align-items:flex-start; gap:7px;
+  font-size:8.5px; color:#7899bc; line-height:1.5;
+  margin-bottom:7px; padding-bottom:7px;
+  border-bottom:1px solid rgba(255,255,255,.05);
+}
+.strength-item:last-child { border-bottom:none; margin-bottom:0; }
+.str-icon { font-size:11px; flex-shrink:0; margin-top:0px; }
+
+/* Sidebar achievements */
+.ach-item {
+  display:flex; align-items:flex-start; gap:8px;
+  margin-bottom:8px;
+}
+.ach-num {
+  font-family:var(--font-mono);
+  font-size:15px; font-weight:500;
+  color:var(--c-goldlt);
+  line-height:1;
+  flex-shrink:0;
+  width:32px;
+  text-align:right;
+}
+.ach-label { font-size:8px; color:#7899bc; line-height:1.4; }
+
+/* ═══════════════════════════════════════════════
+   MAIN COLUMN
+═══════════════════════════════════════════════ */
+.main-col { padding: 26px 24px 24px 26px; }
+
+/* Section */
+.sec { margin-bottom: 20px; }
+.sec-hdr {
+  display:flex; align-items:center; gap:10px;
+  margin-bottom: 12px;
+}
+.sec-gem {
+  width:8px; height:8px; flex-shrink:0;
+  background:var(--c-gold);
+  clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%);
+}
+.sec-hdr h2 {
+  font-family: var(--font-display);
+  font-size:16px; font-weight:700;
+  color:var(--c-navy);
+  white-space:nowrap;
+  letter-spacing:.3px;
+}
+.sec-line {
+  flex:1; height:1px;
+  background:linear-gradient(to right,var(--c-mid),var(--c-rule),transparent);
+}
+
+/* Summary */
+.summary-box {
+  background:linear-gradient(135deg,var(--c-ice) 0%,#f0f6ff 100%);
+  border:1px solid var(--c-rule);
+  border-left:3px solid var(--c-mid);
+  border-radius:0 5px 5px 0;
+  padding:12px 14px;
+  font-size:10px;
+  color:var(--c-sub);
+  line-height:1.75;
+}
+.summary-box strong { color:var(--c-navy); font-weight:600; }
+.summary-highlights {
+  display:flex; flex-wrap:wrap; gap:6px;
+  margin-top:10px;
+}
+.sh-chip {
+  background:var(--c-navy);
+  color:var(--c-goldlt);
+  font-size:8px;
+  font-weight:600;
+  padding:3px 9px;
+  border-radius:20px;
+  font-family:var(--font-mono);
+  letter-spacing:.5px;
+}
+
+/* Experience */
+.exp-block {
+  border:1px solid var(--c-rule);
+  border-radius:6px;
+  overflow:hidden;
+  margin-bottom:12px;
+}
+.exp-header-bar {
+  background:linear-gradient(135deg, var(--c-navy) 0%, var(--c-blue) 100%);
+  padding:10px 14px;
+  display:flex; justify-content:space-between; align-items:flex-start; gap:8px;
+}
+.exp-h-left {}
+.exp-title-line {
+  font-size:12px; font-weight:700; color:#fff; line-height:1.2; margin-bottom:2px;
+}
+.exp-company-line {
+  font-size:10px; color:var(--c-goldlt); font-weight:600;
+}
+.exp-date-badge {
+  background:rgba(212,160,23,.2);
+  border:1px solid rgba(212,160,23,.4);
+  border-radius:4px;
+  padding:4px 10px;
+  font-size:8.5px;
+  font-weight:600;
+  color:var(--c-goldlt);
+  font-family:var(--font-mono);
+  white-space:nowrap;
+  flex-shrink:0;
+}
+.exp-stack-row {
+  background:var(--c-ice);
+  border-bottom:1px solid var(--c-rule);
+  padding:5px 14px;
+  font-size:8px;
+  color:var(--c-muted);
+  font-family:var(--font-mono);
+  line-height:1.4;
+}
+.exp-body { padding:10px 14px 12px; }
+.exp-ul { list-style:none; }
+.exp-ul li {
+  font-size:9.5px; color:var(--c-sub);
+  padding:3px 0 3px 16px;
+  position:relative; line-height:1.6;
+}
+.exp-ul li::before {
+  content:'▸';
+  position:absolute; left:0;
+  color:var(--c-sky); font-size:9px; top:4px;
+}
+.exp-ul li strong { color:var(--c-navy); font-weight:600; }
+
+/* Projects heading row */
+.proj-count-badge {
+  background:var(--c-navy); color:var(--c-goldlt);
+  font-size:8px; font-weight:700;
+  padding:3px 10px; border-radius:20px;
+  font-family:var(--font-mono);
+  margin-left:6px;
+}
+
+/* Project cards */
+.proj-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:9px;
+}
+.proj-card {
+  border:1px solid var(--c-rule);
+  border-radius:6px;
+  overflow:hidden;
+  background:white;
+  break-inside:avoid;
+}
+.proj-card-hdr {
+  padding:9px 11px 8px;
+  position:relative;
+  overflow:hidden;
+}
+.proj-card-hdr::before {
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg, var(--c-navy) 0%, var(--c-blue) 70%, var(--c-mid) 100%);
+}
+.proj-card-hdr::after {
+  content:'';
+  position:absolute;
+  right:-20px; top:-20px;
+  width:80px; height:80px;
+  border-radius:50%;
+  background:rgba(255,255,255,.04);
+}
+.proj-num {
+  font-family:var(--font-mono);
+  font-size:7px; font-weight:500;
+  color:var(--c-gold);
+  letter-spacing:1.5px;
+  position:relative;
+  margin-bottom:2px;
+}
+.proj-title {
+  font-size:10px; font-weight:700;
+  color:#fff; line-height:1.3;
+  position:relative; margin-bottom:4px;
+}
+.proj-stack {
+  font-size:7.5px; color:#80aace;
+  font-family:var(--font-mono);
+  line-height:1.5;
+  position:relative;
+}
+.proj-body { padding:8px 11px 10px; }
+.proj-ul { list-style:none; }
+.proj-ul li {
+  font-size:8.5px; color:var(--c-sub);
+  padding:2.5px 0 2.5px 13px;
+  position:relative; line-height:1.55;
+}
+.proj-ul li::before {
+  content:'◆';
+  position:absolute; left:0;
+  color:var(--c-sky); font-size:6px; top:5px;
+}
+.proj-ul li strong { color:var(--c-navy); font-weight:600; }
+
+/* ── page break helper ── */
+.page-break-before { page-break-before:always; break-before:page; }
+
+/* Page 2+ continuation header */
+.cont-header {
+  background:linear-gradient(135deg, var(--c-navy) 0%, var(--c-blue) 100%);
+  padding:10px 26px;
+  display:flex; justify-content:space-between; align-items:center;
+}
+.cont-name {
+  font-family:var(--font-display);
+  font-size:14px; font-weight:700; color:white;
+}
+.cont-label {
+  font-size:8px; color:var(--c-gold);
+  font-family:var(--font-mono);
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+
+/* Divider */
+.divider {
+  height:1px;
+  background:linear-gradient(to right, var(--c-rule), transparent);
+  margin:12px 0;
+}
+</style>
+</head>
+<body>
+
+<!-- ╔══════════════════════════════════════════╗
+     ║           PAGE 1                        ║
+     ╚══════════════════════════════════════════╝ -->
+<div class="page">
+  <div class="layout">
+
+    <!-- ──────── SIDEBAR ──────── -->
+    <aside class="sidebar">
+      <div class="sb-hero">
+        <div class="photo-frame">
+          <img src="data:image/png;base64,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" alt="Meet Dhamecha">
+        </div>
+        <div class="sb-name">Meet<br>Dhamecha</div>
+        <div class="sb-role">Python Full-Stack Developer<br>AI / LLM Engineer</div>
+        <div class="sb-exp-badge">2+ Years Experience</div>
+      </div>
+
+      <div class="sb-body">
+
+        <!-- CONTACT -->
+        <div class="sb-sec">
+          <div class="sb-sec-title">Contact</div>
+          <div class="contact-row"><span class="ci">📞</span><span>(+91) 8401447120</span></div>
+          <div class="contact-row"><span class="ci">✉</span><span>meetdhamecha82@gmail.com</span></div>
+          <div class="contact-row"><span class="ci">📍</span><span>Surat, Gujarat, India</span></div>
+          <div class="contact-row"><span class="ci">🔗</span><span>linkedin.com/in/meet-dhamecha</span></div>
+          <div class="contact-row"><span class="ci">🐙</span><span>github.com/meet-dhamecha</span></div>
+        </div>
+
+        <!-- KEY NUMBERS -->
+        <div class="sb-sec">
+          <div class="sb-sec-title">Highlights</div>
+          <div class="ach-item"><div class="ach-num">14</div><div class="ach-label">Production AI &amp; backend projects delivered</div></div>
+          <div class="ach-item"><div class="ach-num">2+</div><div class="ach-label">Years professional experience</div></div>
+          <div class="ach-item"><div class="ach-num">500K+</div><div class="ach-label">Records scraped &amp; processed weekly</div></div>
+          <div class="ach-item"><div class="ach-num">30K+</div><div class="ach-label">Lines of code — enterprise platform</div></div>
+          <div class="ach-item"><div class="ach-num">80%</div><div class="ach-label">LLM API cost reduction via local models</div></div>
+          <div class="ach-item"><div class="ach-num">100×</div><div class="ach-label">Query speedup with Redis caching</div></div>
+        </div>
+
+        <!-- SKILLS -->
+        <div class="sb-sec">
+          <div class="sb-sec-title">Technical Skills</div>
+
+          <div class="skill-cat">
+            <div class="skill-cat-name">Languages &amp; Backend</div>
+            <div class="tags">
+              <span class="tag tag-core">Python</span><span class="tag tag-core">FastAPI</span><span class="tag tag-core">Django</span><span class="tag tag-core">DRF</span><span class="tag tag-core">Flask</span><span class="tag tag-core">SQLAlchemy</span><span class="tag tag-core">REST API</span><span class="tag tag-core">Pydantic</span>
+            </div>
+          </div>
+          <div class="skill-cat">
+            <div class="skill-cat-name">AI / LLM Engineering</div>
+            <div class="tags">
+              <span class="tag tag-ai">LangChain</span><span class="tag tag-ai">LangGraph</span><span class="tag tag-ai">Ollama</span><span class="tag tag-ai">Gemini API</span><span class="tag tag-ai">Claude API</span><span class="tag tag-ai">HuggingFace</span><span class="tag tag-ai">MCP</span><span class="tag tag-ai">AI Agents</span><span class="tag tag-ai">Tool Calling</span><span class="tag tag-ai">Prompt Eng.</span>
+            </div>
+          </div>
+          <div class="skill-cat">
+            <div class="skill-cat-name">RAG &amp; Vector Databases</div>
+            <div class="tags">
+              <span class="tag tag-ai">RAG Pipelines</span><span class="tag tag-ai">CAG</span><span class="tag tag-ai">Qdrant</span><span class="tag tag-ai">ChromaDB</span><span class="tag tag-ai">PGVector</span><span class="tag tag-ai">Embeddings</span><span class="tag tag-ai">Semantic Search</span><span class="tag tag-ai">HNSW</span>
+            </div>
+          </div>
+          <div class="skill-cat">
+            <div class="skill-cat-name">Data Science &amp; ML</div>
+            <div class="tags">
+              <span class="tag tag-data">Pandas</span><span class="tag tag-data">NumPy</span><span class="tag tag-data">Scikit-learn</span><span class="tag tag-data">XGBoost</span><span class="tag tag-data">Matplotlib</span><span class="tag tag-data">Seaborn</span><span class="tag tag-data">Plotly</span><span class="tag tag-data">SHAP</span><span class="tag tag-data">EDA</span>
+            </div>
+          </div>
+          <div class="skill-cat">
+            <div class="skill-cat-name">Scraping &amp; Automation</div>
+            <div class="tags">
+              <span class="tag tag-core">Selenium</span><span class="tag tag-core">BeautifulSoup</span><span class="tag tag-core">XPath/CSS</span><span class="tag tag-core">n8n</span><span class="tag tag-core">Headless</span>
+            </div>
+          </div>
+          <div class="skill-cat">
+            <div class="skill-cat-name">Databases</div>
+            <div class="tags">
+              <span class="tag tag-core">PostgreSQL</span><span class="tag tag-core">MySQL</span><span class="tag tag-core">SQLite</span><span class="tag tag-core">Redis</span><span class="tag tag-core">Alembic</span>
+            </div>
+          </div>
+          <div class="skill-cat">
+            <div class="skill-cat-name">DevOps &amp; Cloud</div>
+            <div class="tags">
+              <span class="tag tag-infra">Docker</span><span class="tag tag-infra">Kubernetes</span><span class="tag tag-infra">AWS EC2/S3/RDS</span><span class="tag tag-infra">GitHub Actions</span><span class="tag tag-infra">GitLab CI</span><span class="tag tag-infra">Nginx</span><span class="tag tag-infra">Gunicorn</span>
+            </div>
+          </div>
+          <div class="skill-cat">
+            <div class="skill-cat-name">BI, Tools &amp; Practices</div>
+            <div class="tags">
+              <span class="tag tag-data">Power BI</span><span class="tag tag-data">DAX</span><span class="tag tag-data">Chart.js</span><span class="tag tag-data">D3.js</span><span class="tag tag-core">Git</span><span class="tag tag-core">Celery</span><span class="tag tag-core">WebSocket</span><span class="tag tag-core">Postman</span><span class="tag tag-core">Pytest</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- EDUCATION -->
+        <div class="sb-sec">
+          <div class="sb-sec-title">Education</div>
+          <div class="edu-deg">Bachelor of Science in Information Technology</div>
+          <div class="edu-inst">J.P. Dawer Institute of Information Science &amp; Technology</div>
+          <div class="edu-inst">Veer Narmad South Gujarat University, Surat</div>
+          <div class="edu-year">2020 – 2024</div>
+          <div class="gpa-bar"><div class="gpa-fill"></div></div>
+        </div>
+
+        <!-- CORE STRENGTHS -->
+        <div class="sb-sec">
+          <div class="sb-sec-title">Core Strengths</div>
+          <div class="strength-item"><span class="str-icon">🧠</span><span>Deep LLM internals: tokenization, context windows, attention mechanisms &amp; advanced prompt engineering for open-source and proprietary models</span></div>
+          <div class="strength-item"><span class="str-icon">🔌</span><span>MCP (Model Context Protocol) server architecture — tool design &amp; AI agent-to-service integration</span></div>
+          <div class="strength-item"><span class="str-icon">🔍</span><span>Vector search systems: embedding model selection, hybrid retrieval strategies, chunk sizing &amp; re-ranking</span></div>
+          <div class="strength-item"><span class="str-icon">🛡️</span><span>Production AI safety: rate limiting, prompt injection prevention, SQL injection protection &amp; secure API key management</span></div>
+          <div class="strength-item"><span class="str-icon">🚀</span><span>Full DevOps lifecycle: multi-service Docker, CI/CD pipelines, AWS IAM &amp; security configuration</span></div>
+        </div>
+
+      </div>
+    </aside><!-- /sidebar -->
+
+    <!-- ──────── MAIN ──────── -->
+    <div class="main-col">
+
+      <!-- PROFESSIONAL SUMMARY -->
+      <div class="sec">
+        <div class="sec-hdr">
+          <div class="sec-gem"></div>
+          <h2>Professional Summary</h2>
+          <div class="sec-line"></div>
+        </div>
+        <div class="summary-box">
+          Results-driven <strong>Python Backend &amp; AI Systems Developer</strong> with <strong>2+ years</strong> of hands-on experience building scalable REST APIs, intelligent automation pipelines, and production-grade LLM-powered applications. Proficient in <strong>Django, FastAPI</strong>, and full-stack data workflows using Pandas and NumPy. Expert in modern AI engineering with <strong>LangChain, LangGraph, Hugging Face Transformers, Ollama, and MCP (Model Context Protocol)</strong>, with deep specialization in designing <strong>Retrieval-Augmented Generation (RAG) and Cache-Augmented Generation (CAG) systems</strong>, autonomous AI agent frameworks, and document intelligence platforms backed by Qdrant, ChromaDB, and PGVector. Proven ability to integrate multiple LLM providers (Gemini, Claude, OpenRouter, HuggingFace) with automatic failover and cost optimization. Comfortable shipping containerized microservices with <strong>Docker and Kubernetes</strong>, building CI/CD pipelines, and deploying to <strong>AWS</strong> infrastructure. Passionate about building intelligent, performant, and maintainable AI products that solve real-world problems.
+          <div class="summary-highlights">
+            <span class="sh-chip">RAG / CAG Systems</span>
+            <span class="sh-chip">AI Agents + MCP</span>
+            <span class="sh-chip">LangChain / LangGraph</span>
+            <span class="sh-chip">FastAPI / Django</span>
+            <span class="sh-chip">Qdrant / ChromaDB</span>
+            <span class="sh-chip">Docker / AWS</span>
+            <span class="sh-chip">Multi-LLM Integration</span>
+            <span class="sh-chip">WebSocket / Real-time</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- EXPERIENCE -->
+      <div class="sec">
+        <div class="sec-hdr">
+          <div class="sec-gem"></div>
+          <h2>Professional Experience</h2>
+          <div class="sec-line"></div>
+        </div>
+
+        <!-- Job 1 -->
+        <div class="exp-block">
+          <div class="exp-header-bar">
+            <div class="exp-h-left">
+              <div class="exp-title-line">Backend Developer</div>
+              <div class="exp-company-line">TeamOpine Solutions — Surat, Gujarat</div>
+            </div>
+            <span class="exp-date-badge">Jan 2025 – Present</span>
+          </div>
+          <div class="exp-stack-row">Stack: Python · FastAPI · LangChain · LangGraph · RAG · CAG · MCP (Model Context Protocol) · Celery · Redis · PostgreSQL · Docker · Gemini API · Claude API · HuggingFace · Qdrant · ChromaDB</div>
+          <div class="exp-body">
+            <ul class="exp-ul">
+              <li>Developed <strong>high-performance FastAPI microservices</strong> with role-based authentication, JWT security, input validation via Pydantic, comprehensive OpenAPI/Swagger documentation, and Celery + Redis background task processing for heavy ETL operations, file processing, and bulk email dispatch — reducing endpoint response times by over <strong>60%</strong>.</li>
+              <li>Designed and deployed a <strong>multi-document RAG system</strong> supporting PDF, DOCX, XLSX, CSV, and image inputs; engineered the full ingestion pipeline including format-specific text extraction (PyMuPDF, python-docx, Pandas, Tesseract OCR), configurable chunking with overlap, embedding generation via Hugging Face sentence transformers, and hybrid vector search (dense + sparse) using both Qdrant and ChromaDB.</li>
+              <li>Architected a <strong>production-grade RAG + CAG chatbot platform</strong> with real-time WebSocket communication, Redis pub/sub for event distribution, and a dual-layer semantic caching system achieving <strong>sub-100ms</strong> cached answer retrieval (5–10ms) and <strong>sub-500ms</strong> full pipeline latency; deployed with 5-microservice Docker Compose (FastAPI, Celery workers, Redis, Qdrant, Flower monitoring).</li>
+              <li>Built <strong>MCP (Model Context Protocol) servers</strong> using FastMCP framework integrating Gemini 2.5-Flash and Anthropic Claude API with file management tools, response persistence, and agent-to-service communication; developed multi-LLM AI agent frameworks unifying OpenRouter, HuggingFace (DeepSeek-V3.2), Gemini, and Claude under a single abstraction layer.</li>
+              <li>Architected a <strong>graph-based multi-agent automation framework</strong> using LangGraph and LangChain: Orchestrator agents for task routing, SQL Executor agents for NL-to-SQL translation, Chart Generation agents, and Monitor agents for health checks — all connected to WhatsApp and Telegram bots; used Ollama to run Llama 3 and Mistral locally, achieving <strong>80% reduction in LLM API spend</strong>.</li>
+              <li>Integrated <strong>Gemini 2.0 Flash Vision</strong> and Hugging Face vision models to power an AI food nutrition prediction backend serving an Android application — processing 1,000+ daily requests at sub-800ms average response time; collaborated on <strong>Power BI dashboards</strong> and analytics pipelines using Pandas, NumPy, and Plotly for business reporting.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Job 2 -->
+        <div class="exp-block">
+          <div class="exp-header-bar">
+            <div class="exp-h-left">
+              <div class="exp-title-line">Software Engineer</div>
+              <div class="exp-company-line">Zerobit Infotech — Surat, Gujarat</div>
+            </div>
+            <span class="exp-date-badge">Jul 2024 – Dec 2024</span>
+          </div>
+          <div class="exp-stack-row">Stack: Python · Django · Django REST Framework · Selenium · BeautifulSoup · PostgreSQL · MySQL · Ubuntu Server · Nginx · n8n · Pandas · Git</div>
+          <div class="exp-body">
+            <ul class="exp-ul">
+              <li>Built and maintained <strong>scalable Django and DRF web applications</strong> implementing modular architectures with JWT authentication, DTO-based request handling, schema validation layers using DRF serializers, and optimized PostgreSQL/MySQL integration to support complex multi-tenant business workflows.</li>
+              <li>Designed and deployed <strong>advanced web scraping pipelines</strong> using Selenium with headless Chrome (anti-detection strategies: rotating user agents, stealth plugins, proxy rotation, CAPTCHA-handling) and BeautifulSoup for DOM parsing, targeting 12+ US-based e-commerce and inventory management portals — maintaining <strong>95%+ uptime</strong> across long-running headless Ubuntu server jobs.</li>
+              <li>Automated <strong>data transformation and export workflows</strong> in Python — converting raw scraped datasets into clean, normalized CSV/Excel formats using Pandas; built <strong>n8n automation workflows</strong> for scheduling, alerting, and end-to-end pipeline handoff, enabling fully automated data collection and delivery without manual intervention.</li>
+              <li>Deployed and managed production applications on <strong>Ubuntu servers</strong> — configured Nginx reverse proxy, Gunicorn WSGI server, environment-based settings, static file serving, PostgreSQL connection pooling, and performed performance tuning and live troubleshooting of production issues.</li>
+            </ul>
+          </div>
+        </div>
+      </div><!-- /experience -->
+
+      <!-- PROJECTS - First batch -->
+      <div class="sec">
+        <div class="sec-hdr">
+          <div class="sec-gem"></div>
+          <h2>Key Projects<span class="proj-count-badge">14 Projects</span></h2>
+          <div class="sec-line"></div>
+        </div>
+
+        <div class="proj-grid">
+
+          <div class="proj-card">
+            <div class="proj-card-hdr">
+              <div class="proj-num">PROJECT 01</div>
+              <div class="proj-title">MCP RAG + CAG Chatbot Platform</div>
+              <div class="proj-stack">FastAPI · LangChain · Qdrant · Redis · Celery · WebSocket · Docker · Gemini · Claude API · Sentence Transformers</div>
+            </div>
+            <div class="proj-body">
+              <ul class="proj-ul">
+                <li>Architected a <strong>production-grade RAG + CAG (Cache Augmented Generation)</strong> chatbot platform with real-time WebSocket communication and 5-microservice Docker Compose orchestration — FastAPI (API), Celery (async workers), Redis (pub/sub + caching), Qdrant (vector DB), Flower (monitoring dashboard).</li>
+                <li>Implemented <strong>MCP server</strong> with Gemini 2.5-Flash + Anthropic Claude API integration providing 4 tools: ask_gemini, save_response, read_response, list_responses; unified multi-LLM interface across Gemini, Claude, HuggingFace DeepSeek-V3.2, and OpenRouter.</li>
+                <li>Dual-layer caching: <strong>Redis semantic answer cache</strong> (92% cosine similarity threshold) delivers 5–10ms hits; full RAG pipeline (Qdrant HNSW search + Gemini generation) completes in 400–500ms; average latency <strong>~250ms</strong> with caching; throughput scales to <strong>32–40 questions/sec</strong> with 4 workers.</li>
+                <li>Real-time frontend UI: WebSocket connection, Markdown rendering (marked.js + DOMPurify XSS sanitization), source attribution with relevance scores + page numbers, typing indicators, latency metrics display, cache hit badges, and streaming token-by-token responses.</li>
+                <li>Document ingestion pipeline for PDF, DOCX, TXT, JSON — automatic chunking (512 tokens, 50 overlap), Sentence Transformer embedding, Qdrant upsert with metadata; metadata filtering by category in vector search queries.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="proj-card">
+            <div class="proj-card-hdr">
+              <div class="proj-num">PROJECT 02</div>
+              <div class="proj-title">Database Insight Assistant — Enterprise AI Analytics</div>
+              <div class="proj-stack">Django DRF · LangChain · Qdrant · Redis · Celery · Chart.js · D3.js · TailwindCSS · Docker · 4 LLM Providers</div>
+            </div>
+            <div class="proj-body">
+              <ul class="proj-ul">
+                <li>Full-stack AI-powered database analytics platform — <strong>60+ REST endpoints, 77 API view classes, 7 Celery tasks, 12 HTML templates, 54 Python files, ~30,000+ LOC</strong>; glassmorphism frontend with D3.js force-directed relationship graphs and Chart.js 4.x visualizations.</li>
+                <li><strong>4-agent orchestration system</strong>: SQL Agent (NL-to-SQL with relationship detection), Analyst Agent (statistical analysis + anomaly detection), Reporter Agent (dashboard + report generation), Monitor Agent (data quality profiling); <strong>4 LLM providers</strong> (Gemini, Groq, HuggingFace, OpenRouter) with automatic failover.</li>
+                <li><strong>Power BI-like dashboard engine</strong>: AI single-prompt dashboard generation, drag-and-drop widget builder, 40+ DAX-like measures (aggregations, time intelligence YoY/MoM/YTD, statistical functions), cross-filtering, and portable <code>.dbia</code> export format; <strong>100× query speedup</strong> via Redis 256MB LRU cache.</li>
+                <li>Cross-database support — SQLite, PostgreSQL, MySQL, MSSQL; file uploads (SQLite, CSV, JSON, XML, SQL dumps); WAL mode + busy timeout + exponential backoff for database lock resolution; SQL injection protection via parameterized queries; Docker Compose (5 services: Django, Redis, Qdrant, Celery, Flower).</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="proj-card">
+            <div class="proj-card-hdr">
+              <div class="proj-num">PROJECT 03</div>
+              <div class="proj-title">AI Agents with MCP Framework</div>
+              <div class="proj-stack">MCP · FastMCP · LangChain · OpenRouter · Gemini · HuggingFace DeepSeek-V3.2 · SQLAlchemy · Rich CLI</div>
+            </div>
+            <div class="proj-body">
+              <ul class="proj-ul">
+                <li>Multi-module AI agent framework demonstrating the <strong>LLM vs. Agent paradigm distinction</strong> — SimpleLLM (intelligence only) vs. AIAgent (decision-making, task prioritization, state persistence, action execution in external systems).</li>
+                <li><strong>FastMCP server</strong> with 4 tools: ask_gemini, save_response, read_response, list_responses; integrates Gemini 2.5-Flash model; standardized MCP tool interface for AI-to-service communication.</li>
+                <li><strong>DatabaseAIAgent</strong> with multi-database connectivity (MySQL, PostgreSQL, MSSQL via SQLAlchemy); natural language schema understanding, NL-to-SQL generation, safe query execution, and results formatted via Rich terminal UI with formatted tables and panels.</li>
+                <li>HuggingFace DeepSeek-V3.2 integration with both standard and <strong>streaming token-by-token responses</strong>; environment-based configuration; comprehensive test suite for MCP tools.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="proj-card">
+            <div class="proj-card-hdr">
+              <div class="proj-num">PROJECT 04</div>
+              <div class="proj-title">Document Intelligence System — Multi-Format RAG</div>
+              <div class="proj-stack">LangChain · Qdrant · ChromaDB · PGVector · HuggingFace · FastAPI · Ollama · Tesseract OCR · PyMuPDF</div>
+            </div>
+            <div class="proj-body">
+              <ul class="proj-ul">
+                <li>Full document intelligence platform — users upload <strong>PDF, DOCX, XLSX, Excel, and image files</strong> and have natural-language conversations with their content powered by a complete RAG pipeline with configurable chunk overlap and dynamic metadata tagging.</li>
+                <li>Format-specific extractors: PyMuPDF (PDF), python-docx (DOCX), Pandas (Excel/XLSX), <strong>Tesseract OCR</strong> (images); HuggingFace sentence transformer embeddings indexed in both Qdrant and PGVector for redundancy.</li>
+                <li><strong>Hybrid search</strong> (dense + sparse retrieval) improving recall for technical and factual queries; LangChain context-window compression, relevance-ranked chunk injection, and structured prompts for accurate grounded responses.</li>
+                <li><strong>Multi-tenant document isolation</strong> — each user's documents and conversation history remain private; Ollama-backed local LLM option (Llama 3, Mistral) for enterprise clients with on-premise data requirements and air-gapped environments.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div><!-- /proj-grid -->
+      </div>
+
+    </div><!-- /main-col -->
+  </div><!-- /layout -->
+</div><!-- /page 1 -->
+
+
+<!-- ╔══════════════════════════════════════════╗
+     ║           PAGE 2                        ║
+     ╚══════════════════════════════════════════╝ -->
+<div class="page page-break-before">
+  <div class="cont-header">
+    <div class="cont-name">Meet Dhamecha</div>
+    <div class="cont-label">Python Full-Stack &amp; AI/LLM Engineer — Page 2 of 3</div>
+  </div>
+  <div style="padding:22px 24px 24px 26px;">
+
+    <div class="sec">
+      <div class="sec-hdr">
+        <div class="sec-gem"></div>
+        <h2>Key Projects — Continued<span class="proj-count-badge">Projects 05–10</span></h2>
+        <div class="sec-line"></div>
+      </div>
+
+      <div class="proj-grid">
+
+        <div class="proj-card">
+          <div class="proj-card-hdr">
+            <div class="proj-num">PROJECT 05</div>
+            <div class="proj-title">Database Communicator RAG</div>
+            <div class="proj-stack">Gemini API · ChromaDB · Sentence Transformers · SQLAlchemy · MySQL · Pandas · Python</div>
+          </div>
+          <div class="proj-body">
+            <ul class="proj-ul">
+              <li>Production-ready <strong>RAG-based NL-to-SQL system</strong> converting plain-English questions into optimized SQL queries and returning answers in natural language; multi-stage pipeline: Cache Check → Schema Retrieval → SQL Generation → Execution → NL Synthesis → Cache Store.</li>
+              <li><strong>Semantic similarity caching</strong> using ChromaDB embeddings with configurable threshold (default 0.88); finds similar previous questions, returns cached answer at ~5ms — eliminates redundant LLM API calls, significantly reducing cost.</li>
+              <li>Dynamic schema population into vector store — table/column relationships stored as embeddings for context-aware SQL generation; schema-aware prompting reduces hallucinations vs. naive approaches.</li>
+              <li><strong>Auto CSV export</strong> for large datasets (configurable row threshold, default 50); NL answer synthesis generating conversational responses with insights from query results; cache hit/miss statistics tracking and database summarization.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-card-hdr">
+            <div class="proj-num">PROJECT 06</div>
+            <div class="proj-title">Multi-Agent AI Automation Platform</div>
+            <div class="proj-stack">LangGraph · LangChain · Ollama · FastAPI · WhatsApp API · Telegram Bot API · PostgreSQL</div>
+          </div>
+          <div class="proj-body">
+            <ul class="proj-ul">
+              <li><strong>Graph-based multi-agent framework</strong> using LangGraph with 4 distinct node agents: Orchestrator Agent (intent routing and task delegation), Query Agent (NL-to-SQL translation), Chart Maker Agent (visualization generation), Monitor Agent (health checks and anomaly alerting).</li>
+              <li>WhatsApp and Telegram automation bots connected to the agent framework — users send commands like <em>"show this week's sales by region"</em> and receive <strong>chart images directly in the chat</strong>; supports structured queries, report generation, and CSV attachments.</li>
+              <li>Database Communicator Agent — translates free-text questions to SQL, executes safely against live PostgreSQL with parameterized queries, formats results into readable summaries or downloadable CSV files.</li>
+              <li>Ollama-hosted <strong>local LLMs (Llama 3, Mistral)</strong> for cost-sensitive agent tasks with graceful fallback to Gemini API for complex reasoning — achieving <strong>80% LLM API spend reduction</strong>; fault-tolerant retry policies, agent state persistence, and full audit logging across all workflow nodes.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-card-hdr">
+            <div class="proj-num">PROJECT 07</div>
+            <div class="proj-title">AI Food Nutrition Analyzer</div>
+            <div class="proj-stack">FastAPI · Gemini 2.0 Flash Vision · MySQL · SQLAlchemy · AWS EC2 · AWS RDS · PIL/Pillow · Uvicorn</div>
+          </div>
+          <div class="proj-body">
+            <ul class="proj-ul">
+              <li>Complete backend for an <strong>Android application</strong> — accepts food images via multipart upload, analyzes using Gemini 2.0 Flash Vision AI, returns detailed per-dish nutrition breakdowns: calories, protein, carbohydrates, fat, fiber, sugar, sodium, cholesterol, count of servings, and meal-time recommendations (breakfast/lunch/dinner/snack).</li>
+              <li>Serves <strong>1,000+ daily requests</strong> with sub-800ms average response time on AWS EC2 + RDS PostgreSQL; image optimization pipeline (PIL resizing, base64 encoding) keeps per-request token cost within budget while maintaining prediction accuracy above 90%.</li>
+              <li>3 REST endpoints: POST /api/analyze-food (upload + analyze), GET /api/analyze-food (paginated history with date-range filtering), POST /api/user-register (device registration); <strong>API key authentication</strong> via x-api-key header, CORS support, UUID-based secure file storage.</li>
+              <li><strong>Token usage tracking</strong> (input/output/total per request) for cost monitoring; SQLAlchemy ORM with 2 tables (food_analyses, user); input sanitization + rate limiting middleware preventing prompt injection attacks and unauthorized access.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-card-hdr">
+            <div class="proj-num">PROJECT 08</div>
+            <div class="proj-title">Machine Learning Prediction &amp; Analytics</div>
+            <div class="proj-stack">Scikit-learn · XGBoost · Pandas · NumPy · SHAP · Matplotlib · Seaborn · Plotly · FastAPI · Jupyter</div>
+          </div>
+          <div class="proj-body">
+            <ul class="proj-ul">
+              <li>Trained and evaluated multiple <strong>classification and regression models</strong> — Random Forest, XGBoost, Logistic Regression — across business datasets including customer churn prediction, product price estimation, and demand forecasting.</li>
+              <li>End-to-end ML workflows: <strong>EDA, feature engineering</strong> (encoding, scaling, interaction features), hyperparameter tuning with GridSearchCV + RandomizedSearchCV, k-fold cross-validation, and <strong>SHAP value interpretability reports</strong> explaining model decisions to non-technical stakeholders.</li>
+              <li>Served trained models as <strong>FastAPI REST inference endpoints</strong> — enabling real-time predictions integrated into frontend dashboards and downstream business applications without exposing raw model code.</li>
+              <li>Packaged analytical pipelines into <strong>interactive HTML dashboards</strong> (Plotly) and <strong>automated PDF reports</strong> (Matplotlib) delivered to stakeholders, fully replacing manual Excel-based reporting processes.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-card-hdr">
+            <div class="proj-num">PROJECT 09</div>
+            <div class="proj-title">Power BI Analytics Dashboards</div>
+            <div class="proj-stack">Power BI · DAX · Python · PostgreSQL · Pandas · NumPy · Direct Query</div>
+          </div>
+          <div class="proj-body">
+            <ul class="proj-ul">
+              <li><strong>College attendance tracking dashboard</strong> with department-wise, student-wise, and date-range views; drill-through capabilities enabling administrators to navigate from summary KPIs down to individual student attendance records.</li>
+              <li><strong>Inventory management dashboard</strong> for a manufacturing client — live PostgreSQL Direct Query connection, DAX-calculated KPIs: turnover rate, reorder level alerts, stockout risk scores, supplier performance metrics; <strong>automated email alerts</strong> triggered on threshold breaches.</li>
+              <li>Pre-processed raw data with Python and Pandas before loading into Power BI data models — data cleaning, type normalization, calculated columns — significantly improving query performance and reducing dashboard load times.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-card-hdr">
+            <div class="proj-num">PROJECT 10</div>
+            <div class="proj-title">Secure Microservice API with Async Task Processing</div>
+            <div class="proj-stack">FastAPI · Celery · Redis · SQLAlchemy · PostgreSQL · MySQL · Alembic · Pytest · GitLab CI · Postman</div>
+          </div>
+          <div class="proj-body">
+            <ul class="proj-ul">
+              <li>Production <strong>FastAPI microservice</strong> with layered security: OAuth2 + JWT tokens, refresh token rotation, IP-based rate limiting, and role-based permission guards on all resource endpoints; Celery + Redis broker offloaded heavy operations (PDF generation, bulk email dispatch, data transformation) — reducing endpoint response times by <strong>over 60%</strong>.</li>
+              <li>Abstracted database with <strong>SQLAlchemy ORM + Alembic migrations</strong> supporting dual-database environments (MySQL for legacy integration, PostgreSQL for new services) with zero-downtime schema changes.</li>
+              <li>Comprehensive <strong>Pytest test suite achieving 85%+ code coverage</strong>; automated API contract validation using Postman collections; integrated into GitLab CI pipeline with automated test runs on every push.</li>
+              <li>Detailed <strong>OpenAPI/Swagger documentation</strong> with request/response schemas, authentication flows, and error-code references; significantly reduced frontend integration time and onboarding for new team members.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div><!-- /proj-grid -->
+    </div>
+
+  </div>
+</div><!-- /page 2 -->
+
+
+<!-- ╔══════════════════════════════════════════╗
+     ║           PAGE 3                        ║
+     ╚══════════════════════════════════════════╝ -->
+<div class="page page-break-before">
+  <div class="cont-header">
+    <div class="cont-name">Meet Dhamecha</div>
+    <div class="cont-label">Python Full-Stack &amp; AI/LLM Engineer — Page 3 of 3</div>
+  </div>
+  <div style="padding:22px 24px 24px 26px;">
+
+    <div class="sec">
+      <div class="sec-hdr">
+        <div class="sec-gem"></div>
+        <h2>Key Projects — Continued<span class="proj-count-badge">Projects 11–14</span></h2>
+        <div class="sec-line"></div>
+      </div>
+
+      <div class="proj-grid">
+
+        <div class="proj-card">
+          <div class="proj-card-hdr">
+            <div class="proj-num">PROJECT 11</div>
+            <div class="proj-title">Full-Stack E-Commerce with Finance Modules</div>
+            <div class="proj-stack">Django · PostgreSQL · Pandas · OpenPyXL · Nginx · Gunicorn · Ubuntu · select_related</div>
+          </div>
+          <div class="proj-body">
+            <ul class="proj-ul">
+              <li>Production-grade <strong>e-commerce application from scratch</strong> — product catalog management, shopping cart, order processing, role-based admin dashboard with full CRUD; deployed on Ubuntu with Nginx + Gunicorn and PostgreSQL connection pooling.</li>
+              <li>Complex <strong>finance calculation modules</strong>: GST-inclusive invoicing with tax slab logic, profit/margin tracking per product and order, monthly/quarterly revenue summaries; reduced manual accounting effort for the business client by approximately <strong>70%</strong>.</li>
+              <li>Automated <strong>Excel report exporter</strong> using OpenPyXL and Pandas — generates downloadable invoices, stock reports, and sales analytics sheets on demand or via scheduled triggers; reports include formatted cells, formulas, and charts.</li>
+              <li>Database optimization: added indexes, applied <strong>select_related/prefetch_related</strong> to eliminate N+1 queries, query plan analysis — reduced average API response time from <strong>820ms to under 190ms</strong> for product listing endpoints (4.3× speedup).</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-card-hdr">
+            <div class="proj-num">PROJECT 12</div>
+            <div class="proj-title">Multi-Site Web Scraping &amp; Inventory Automation</div>
+            <div class="proj-stack">Selenium · BeautifulSoup · Pandas · n8n · Cron · SQLite · Proxy Rotation · Stealth Plugins · JSON</div>
+          </div>
+          <div class="proj-body">
+            <ul class="proj-ul">
+              <li>Engineered an automated scraping framework targeting <strong>12+ US-based e-commerce and inventory management portals</strong> with dynamic JavaScript-rendered content; used Selenium with rotating user agents, stealth plugins, proxy rotation, and CAPTCHA-handling strategies — maintaining <strong>95%+ uptime</strong> on long-running headless Ubuntu servers.</li>
+              <li>Scraped <strong>500,000+ product and inventory records weekly</strong>; applied Pandas normalization pipelines to clean, deduplicate, and standardize data, then exported structured CSVs for downstream business reporting and client consumption.</li>
+              <li>Built a <strong>cultural data scraping collection</strong>: 250K+ Gujarati wisdom quotes, 700+ Bhagavad Gita shlokas (Sanskrit + commentary), yoga asanas + mudras, astrology forecasts, and Gujarati proverbs/riddles from 10+ websites — full Unicode support (Gujarati, Marathi, Hindi); data stored in JSON and SQLite.</li>
+              <li>Orchestrated scheduling, alerting, and pipeline handoff using <strong>n8n workflows</strong>; retry logic, stateful pagination with back-button navigation, JavaScript DOM execution for dynamic content and paywall bypass.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-card-hdr">
+            <div class="proj-num">PROJECT 13</div>
+            <div class="proj-title">Amazon Scraper — End-to-End ETL Pipeline</div>
+            <div class="proj-stack">Selenium · Pandas · MySQL · mysql-connector-python · WebDriverWait · Jupyter Notebook · CSV</div>
+          </div>
+          <div class="proj-body">
+            <ul class="proj-ul">
+              <li>Selenium-based <strong>Amazon.in laptop scraper</strong> with multi-page pagination (JavaScript-click "Next Page"), scroll-to-load dynamic content, stale element recovery (StaleElementReferenceException handling), explicit WebDriverWait for element readiness, and NoSuchElementException graceful fallback to "N/A".</li>
+              <li>Extracted <strong>64KB+ structured product dataset</strong> — product name, current price, discount percentage, original MRP — across multiple pages covering 100+ laptop listings from multiple brands and price ranges.</li>
+              <li>Complete <strong>ETL pipeline</strong>: Selenium scrape → CSV export → Pandas DataFrame transformation (NaN handling, type conversion, data validation) → MySQL batch insertion with transaction management and connection pooling.</li>
+              <li>Exploratory data analysis and visualization via <strong>Jupyter Notebook</strong> on the scraped dataset and Pokemon dataset — descriptive statistics, correlation analysis, bar/scatter/box/heatmap plots using Matplotlib and Seaborn.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-card-hdr">
+            <div class="proj-num">PROJECT 14</div>
+            <div class="proj-title">Pandas Data Visualization &amp; EDA</div>
+            <div class="proj-stack">Pandas · NumPy · Matplotlib · Seaborn · SciPy · Jupyter Notebook · CSV · Statistical Analysis</div>
+          </div>
+          <div class="proj-body">
+            <ul class="proj-ul">
+              <li>Comprehensive Jupyter Notebook (~533KB) demonstrating <strong>end-to-end Exploratory Data Analysis</strong> workflow on the Ice Cream Ratings dataset — data loading, structural inspection (.head, .info, .describe), missing value detection and treatment, duplicate removal, and type normalization.</li>
+              <li><strong>Advanced Pandas operations</strong>: groupby aggregations, pivot tables, multi-column merge/join, conditional filtering, Boolean indexing, computed columns, rolling windows, and statistical operations (mean, median, std, corr, quantiles).</li>
+              <li>Multi-dimensional visualizations using Matplotlib and Seaborn: <strong>univariate</strong> (histograms, KDE, box plots), <strong>bivariate</strong> (scatter with regression, joint plots), <strong>multivariate</strong> (heatmaps, pair plots, facet grids, color-encoded scatter) — all with professional styling, labels, and annotations.</li>
+              <li>Statistical analysis: Pearson/Spearman correlation matrices, distribution fitting, outlier detection via IQR method, and actionable insight extraction demonstrating <strong>data storytelling</strong> best practices for communicating findings to business stakeholders.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div><!-- /proj-grid -->
+    </div>
+
+    <!-- ADDITIONAL STRENGTHS / WHAT I BRING -->
+    <div class="sec">
+      <div class="sec-hdr">
+        <div class="sec-gem"></div>
+        <h2>What I Bring to Your Team</h2>
+        <div class="sec-line"></div>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:9px;">
+
+        <div style="border:1px solid var(--c-rule); border-radius:6px; overflow:hidden;">
+          <div style="background:linear-gradient(135deg,var(--c-navy),var(--c-blue)); padding:8px 12px;">
+            <div style="font-size:16px; margin-bottom:3px;">🤖</div>
+            <div style="font-size:9.5px; font-weight:700; color:white; line-height:1.3;">AI Engineering Depth</div>
+          </div>
+          <div style="padding:8px 12px;">
+            <p style="font-size:8.5px; color:var(--c-sub); line-height:1.6;">Deep understanding of LLM internals — tokenization, context windows, attention mechanisms, and RAG/CAG architecture design. Proven ability to integrate Gemini, Claude, Ollama, and HuggingFace models into production systems with cost optimization strategies (80% API spend reduction achieved).</p>
+          </div>
+        </div>
+
+        <div style="border:1px solid var(--c-rule); border-radius:6px; overflow:hidden;">
+          <div style="background:linear-gradient(135deg,#1a4a2a,#2a6a3a); padding:8px 12px;">
+            <div style="font-size:16px; margin-bottom:3px;">⚡</div>
+            <div style="font-size:9.5px; font-weight:700; color:white; line-height:1.3;">Backend &amp; System Design</div>
+          </div>
+          <div style="padding:8px 12px;">
+            <p style="font-size:8.5px; color:var(--c-sub); line-height:1.6;">Comfortable architecting complex distributed systems — async microservices, Redis pub/sub, Celery task queues, WebSocket real-time comms. Strong focus on performance optimization: 4.3× API speedup via query optimization, 100× speedup via intelligent caching layers.</p>
+          </div>
+        </div>
+
+        <div style="border:1px solid var(--c-rule); border-radius:6px; overflow:hidden;">
+          <div style="background:linear-gradient(135deg,#3a1a4a,#5a2a6a); padding:8px 12px;">
+            <div style="font-size:16px; margin-bottom:3px;">📊</div>
+            <div style="font-size:9.5px; font-weight:700; color:white; line-height:1.3;">Data &amp; Analytics</div>
+          </div>
+          <div style="padding:8px 12px;">
+            <p style="font-size:8.5px; color:var(--c-sub); line-height:1.6;">Full data pipeline ownership — collection (Selenium, 500K+ records/week), transformation (Pandas, ETL), storage (PostgreSQL, vector DBs), analysis (EDA, ML, SHAP), and visualization (Power BI, Plotly dashboards). Experienced replacing manual Excel workflows with automated pipelines.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- TECHNOLOGIES AT A GLANCE -->
+    <div class="sec">
+      <div class="sec-hdr">
+        <div class="sec-gem"></div>
+        <h2>Technologies at a Glance</h2>
+        <div class="sec-line"></div>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:7px;">
+        <div style="background:var(--c-ice); border:1px solid var(--c-rule); border-radius:4px; padding:8px 10px;">
+          <div style="font-size:7.5px; font-weight:700; color:var(--c-sky); text-transform:uppercase; letter-spacing:1px; margin-bottom:5px;">LLM Providers</div>
+          <div style="font-size:8.5px; color:var(--c-sub); line-height:1.7;">Gemini 2.0/2.5 Flash<br>Anthropic Claude<br>Llama 3 (Ollama)<br>Mistral (Ollama)<br>DeepSeek-V3.2<br>OpenRouter API<br>HuggingFace Inf. API</div>
+        </div>
+        <div style="background:var(--c-ice); border:1px solid var(--c-rule); border-radius:4px; padding:8px 10px;">
+          <div style="font-size:7.5px; font-weight:700; color:var(--c-sky); text-transform:uppercase; letter-spacing:1px; margin-bottom:5px;">AI Frameworks</div>
+          <div style="font-size:8.5px; color:var(--c-sub); line-height:1.7;">LangChain<br>LangGraph<br>MCP / FastMCP<br>Hugging Face Transformers<br>Sentence Transformers<br>Ollama<br>Tiktoken</div>
+        </div>
+        <div style="background:var(--c-ice); border:1px solid var(--c-rule); border-radius:4px; padding:8px 10px;">
+          <div style="font-size:7.5px; font-weight:700; color:var(--c-sky); text-transform:uppercase; letter-spacing:1px; margin-bottom:5px;">Backend &amp; APIs</div>
+          <div style="font-size:8.5px; color:var(--c-sub); line-height:1.7;">FastAPI + Pydantic<br>Django + DRF<br>Flask<br>SQLAlchemy + Alembic<br>Celery + Redis<br>WebSocket<br>OpenAPI/Swagger</div>
+        </div>
+        <div style="background:var(--c-ice); border:1px solid var(--c-rule); border-radius:4px; padding:8px 10px;">
+          <div style="font-size:7.5px; font-weight:700; color:var(--c-sky); text-transform:uppercase; letter-spacing:1px; margin-bottom:5px;">Infra &amp; Cloud</div>
+          <div style="font-size:8.5px; color:var(--c-sub); line-height:1.7;">Docker + Compose<br>Kubernetes<br>AWS EC2 / S3 / RDS<br>GitHub Actions<br>GitLab CI<br>Nginx + Gunicorn<br>Ubuntu Server</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div><!-- /page 3 -->
+
+</body>
+</html>

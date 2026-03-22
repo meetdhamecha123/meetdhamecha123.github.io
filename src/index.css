@@ -58,6 +58,7 @@
 
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
   }
 }
 
@@ -67,7 +68,7 @@
   }
 
   .section-padding {
-    @apply py-24 md:py-32 px-6 md:px-12;
+    @apply py-20 md:py-28 px-6 md:px-12;
   }
 
   .glow {
@@ -112,6 +113,33 @@
     opacity: 0.32;
     pointer-events: none;
     animation: drift-orb 12s ease-in-out infinite;
+  }
+
+  .glass-card {
+    background: hsl(var(--card) / 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--border));
+  }
+
+  .gradient-border {
+    position: relative;
+  }
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, hsl(var(--primary) / 0.5), transparent 60%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  .animate-counter {
+    animation: counter-pop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
   }
 }
 
@@ -195,10 +223,10 @@
 
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(38, 92, 55, 0.2);
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.15);
   }
   50% {
-    box-shadow: 0 0 40px rgba(38, 92, 55, 0.4);
+    box-shadow: 0 0 40px hsl(var(--primary) / 0.35);
   }
 }
 
@@ -209,6 +237,37 @@
   100% {
     background-position: -200% center;
   }
+}
+
+@keyframes counter-pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) translateY(10px);
+  }
+  60% {
+    transform: scale(1.1) translateY(-3px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes typing-dots {
+  0%, 20% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {

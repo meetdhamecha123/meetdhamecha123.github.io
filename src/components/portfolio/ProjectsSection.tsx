@@ -6,7 +6,7 @@ const projects = [
     num: "01",
     title: "MCP RAG + CAG Chatbot Platform",
     stack: "FastAPI · LangChain · Qdrant · Redis · Celery · WebSocket · Docker · Gemini · Claude",
-    desc: "Production-grade RAG + CAG chatbot with real-time WebSocket, 5-microservice Docker Compose, dual-layer semantic caching (5–10ms hits), and MCP server integrating Gemini 2.5-Flash + Claude API.",
+    desc: "Production-grade RAG + CAG chatbot with real-time WebSocket, 5-microservice Docker Compose, dual-layer semantic caching (5–10ms hits), MCP server integrating Gemini 2.5-Flash + Claude API. Implements PageIndex for page-level document indexing with vectorless BM25 fallback retrieval.",
   },
   {
     num: "02",
@@ -24,13 +24,13 @@ const projects = [
     num: "04",
     title: "Document Intelligence System",
     stack: "LangChain · Qdrant · ChromaDB · PGVector · FastAPI · Ollama · Tesseract OCR",
-    desc: "Full document intelligence platform — upload PDF, DOCX, XLSX, images and converse with content via RAG pipeline. Multi-tenant isolation with local LLM option.",
+    desc: "Full document intelligence platform — upload PDF, DOCX, XLSX, images and converse with content via RAG pipeline. PageIndex-based page-level chunking with page number tracking, source attribution showing exact page references. Multi-tenant isolation with local LLM option.",
   },
   {
     num: "05",
     title: "Database Communicator RAG",
     stack: "Gemini API · ChromaDB · Sentence Transformers · SQLAlchemy · MySQL · Pandas",
-    desc: "RAG-based NL-to-SQL system converting plain-English questions into optimized SQL queries. Semantic similarity caching via ChromaDB (~5ms hits), dynamic schema population, and auto CSV export.",
+    desc: "RAG-based NL-to-SQL system converting plain-English questions into optimized SQL queries. Semantic similarity caching via ChromaDB (~5ms hits), dynamic schema population, PageIndex for table-level and page-level document retrieval, and auto CSV export.",
   },
   {
     num: "06",
