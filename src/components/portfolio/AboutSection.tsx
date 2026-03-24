@@ -69,8 +69,8 @@ const AboutSection = () => {
                   <s.icon className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-sm mb-1 group-hover:text-primary transition-colors">{s.title}</h4>
-                  <p className="text-xs text-muted-foreground leading-relaxed">{s.desc}</p>
+                  <h4 className="font-bold text-sm mb-1.5 group-hover:text-primary transition-colors">{s.title}</h4>
+                  <p className="text-xs text-foreground/75 leading-relaxed">{s.desc}</p>
                 </div>
               </div>
             </div>

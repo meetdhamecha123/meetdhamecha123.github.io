@@ -29,17 +29,17 @@ const EducationSection = () => {
           {/* Details */}
           <div className="p-4 sm:p-5 md:p-6 bg-card/50">
             <div className="flex items-start gap-2.5 sm:gap-3 mb-4 sm:mb-5">
-              <MapPin className="w-4 h-4 text-muted-foreground mt-0.5 sm:mt-1 shrink-0" />
+              <MapPin className="w-4 h-4 text-foreground/50 mt-0.5 sm:mt-1 shrink-0" />
               <div>
-                <p className="text-sm sm:text-base text-secondary-foreground font-medium leading-snug">J.P. Dawer Institute of Information Science & Technology</p>
-                <p className="text-[11px] sm:text-xs text-muted-foreground mt-1">Veer Narmad South Gujarat University, Surat</p>
+                <p className="text-sm sm:text-base text-foreground/85 font-medium leading-snug">J.P. Dawer Institute of Information Science & Technology</p>
+                <p className="text-[11px] sm:text-xs text-foreground/60 mt-1">Veer Narmad South Gujarat University, Surat</p>
               </div>
             </div>
 
             {/* GPA bar */}
             <div className="mt-2 sm:mt-4 p-3.5 sm:p-4 rounded-xl bg-secondary/30 border border-border/50">
               <div className="flex justify-between text-[11px] sm:text-xs mb-2">
-                <span className="text-muted-foreground font-medium">Academic Performance</span>
+                <span className="text-foreground/65 font-medium">Academic Performance</span>
                 <span className="text-primary font-mono font-semibold">Strong</span>
               </div>
               <div className="h-1.5 sm:h-2 rounded-full bg-secondary overflow-hidden">

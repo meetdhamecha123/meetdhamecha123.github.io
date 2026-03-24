@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Download } from "lucide-react";
+import { Menu, X, Download, Sun, Moon } from "lucide-react";
+import { useTheme } from "@/contexts/ThemeContext";
 
 const links = [
   { label: "About", href: "#about" },
@@ -13,6 +14,7 @@ const links = [
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -35,16 +37,35 @@ const Navbar = () => {
               {l.label}
             </a>
           ))}
+
+          {/* Theme toggle */}
+          <button
+            onClick={toggleTheme}
+            aria-label="Toggle theme"
+            className="p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10 border border-transparent hover:border-primary/25 transition-all duration-200 active:scale-95"
+          >
+            {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+          </button>
+
           <a href="/Meet_Dhamecha_Resume.pdf" download
             className="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary/10 border border-primary/30 text-primary text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-200 active:scale-[0.97]">
             <Download className="w-3.5 h-3.5" /> Resume
           </a>
         </div>
 
-        {/* Mobile toggle */}
-        <button onClick={() => setOpen(!open)} className="md:hidden text-foreground active:scale-95">
-          {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-        </button>
+        {/* Mobile right side */}
+        <div className="md:hidden flex items-center gap-2">
+          <button
+            onClick={toggleTheme}
+            aria-label="Toggle theme"
+            className="p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-200 active:scale-95"
+          >
+            {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+          </button>
+          <button onClick={() => setOpen(!open)} className="text-foreground active:scale-95 p-1">
+            {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}

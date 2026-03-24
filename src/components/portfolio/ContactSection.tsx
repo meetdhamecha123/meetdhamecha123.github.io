@@ -15,7 +15,7 @@ const ContactSection = () => {
             <MessageSquare className="w-3 h-3" /> Open to Opportunities
           </div>
           <h2 className="text-4xl font-bold tracking-tight">Let's Build Something<br /><span className="text-gradient">Amazing Together</span></h2>
-          <p className="text-muted-foreground text-lg max-w-lg mx-auto">
+          <p className="text-foreground/70 text-lg max-w-lg mx-auto">
             Open to backend engineering, AI/LLM engineering, and full-stack Python roles. Let's connect and create impactful solutions.
           </p>
 
@@ -25,20 +25,20 @@ const ContactSection = () => {
               <Mail className="w-4 h-4" /> Email Me
             </a>
             <a href="https://github.com/meetdhamecha123" target="_blank" rel="noreferrer"
-              className="flex items-center gap-2 px-6 py-3 rounded-lg bg-secondary text-secondary-foreground font-medium hover:bg-border transition-all active:scale-[0.97] hover-lift">
+              className="flex items-center gap-2 px-6 py-3 rounded-lg bg-secondary text-secondary-foreground font-medium hover:bg-muted transition-all active:scale-[0.97] hover-lift">
               <Github className="w-4 h-4" /> GitHub
             </a>
             <a href="https://linkedin.com/in/meet-dhamecha-616021236" target="_blank" rel="noreferrer"
-              className="flex items-center gap-2 px-6 py-3 rounded-lg bg-secondary text-secondary-foreground font-medium hover:bg-border transition-all active:scale-[0.97] hover-lift">
+              className="flex items-center gap-2 px-6 py-3 rounded-lg bg-secondary text-secondary-foreground font-medium hover:bg-muted transition-all active:scale-[0.97] hover-lift">
               <Linkedin className="w-4 h-4" /> LinkedIn
             </a>
             <a href="/Meet_Dhamecha_Resume.pdf" download
-              className="flex items-center gap-2 px-6 py-3 rounded-lg bg-secondary text-secondary-foreground font-medium hover:bg-border transition-all active:scale-[0.97] hover-lift">
+              className="flex items-center gap-2 px-6 py-3 rounded-lg bg-secondary text-secondary-foreground font-medium hover:bg-muted transition-all active:scale-[0.97] hover-lift">
               <Download className="w-4 h-4" /> Resume PDF
             </a>
           </div>
 
-          <div className={`flex flex-wrap justify-center gap-6 pt-8 text-sm text-muted-foreground ${isVisible ? "animate-fade-up" : "opacity-0"}`} style={{ animationDelay: "150ms" }}>
+          <div className={`flex flex-wrap justify-center gap-6 pt-8 text-sm text-foreground/65 ${isVisible ? "animate-fade-up" : "opacity-0"}`} style={{ animationDelay: "150ms" }}>
             <span className="flex items-center gap-1.5"><Phone className="w-3.5 h-3.5" /> (+91) 8401447120</span>
             <span className="flex items-center gap-1.5"><Mail className="w-3.5 h-3.5" /> meetdhamecha82@gmail.com</span>
             <span className="flex items-center gap-1.5"><MapPin className="w-3.5 h-3.5" /> Surat, Gujarat, India</span>

@@ -5,19 +5,25 @@ const cards = [
   {
     icon: Bot,
     title: "AI Engineering Depth",
-    gradient: "from-blue-900/80 to-blue-700/60",
+    gradient: "from-blue-100 to-blue-200 dark:from-blue-900/80 dark:to-blue-700/60",
+    iconColor: "text-blue-600 dark:text-white/90",
+    titleColor: "text-blue-800 dark:text-white",
     desc: "Deep understanding of LLM internals — tokenization, context windows, attention mechanisms, and RAG/CAG architecture design. Specialized in PageIndex-based document retrieval and vectorless RAG strategies. Proven ability to integrate Gemini, Claude, Ollama, and HuggingFace models into production systems with cost optimization (80% API spend reduction achieved).",
   },
   {
     icon: Zap,
     title: "Backend & System Design",
-    gradient: "from-emerald-900/80 to-emerald-700/60",
+    gradient: "from-emerald-100 to-emerald-200 dark:from-emerald-900/80 dark:to-emerald-700/60",
+    iconColor: "text-emerald-600 dark:text-white/90",
+    titleColor: "text-emerald-800 dark:text-white",
     desc: "Comfortable architecting complex distributed systems — async microservices, Redis pub/sub, Celery task queues, WebSocket real-time comms. Strong focus on performance optimization: 4.3× API speedup via query optimization, 100× speedup via intelligent caching layers.",
   },
   {
     icon: BarChart3,
     title: "Data & Analytics",
-    gradient: "from-purple-900/80 to-purple-700/60",
+    gradient: "from-purple-100 to-purple-200 dark:from-purple-900/80 dark:to-purple-700/60",
+    iconColor: "text-purple-600 dark:text-white/90",
+    titleColor: "text-purple-800 dark:text-white",
     desc: "Full data pipeline ownership — collection (Selenium, 500K+ records/week), transformation (Pandas, ETL), storage (PostgreSQL, vector DBs), analysis (EDA, ML, SHAP), and visualization (Power BI, Plotly dashboards). Experienced replacing manual Excel workflows with automated pipelines.",
   },
 ];
@@ -64,11 +70,11 @@ const WhatIBringSection = () => {
               className={`group rounded-xl overflow-hidden border border-border hover:border-primary/40 transition-all duration-300 hover:shadow-[0_0_30px_-10px_hsl(38_92%_55%/0.15)] hover-lift ${isVisible ? "animate-fade-up" : "opacity-0"}`}
               style={{ animationDelay: `${100 + i * 100}ms` }}>
               <div className={`bg-gradient-to-br ${c.gradient} p-5`}>
-                <c.icon className="w-7 h-7 text-white/90 mb-2" />
-                <h3 className="font-bold text-white text-sm">{c.title}</h3>
+                <c.icon className={`w-7 h-7 mb-2 ${c.iconColor}`} />
+                <h3 className={`font-bold text-sm ${c.titleColor}`}>{c.title}</h3>
               </div>
               <div className="p-5 bg-card">
-                <p className="text-xs text-muted-foreground leading-relaxed group-hover:text-secondary-foreground transition-colors">{c.desc}</p>
+                <p className="text-xs text-foreground/80 leading-relaxed group-hover:text-foreground transition-colors">{c.desc}</p>
               </div>
             </div>
           ))}
@@ -85,7 +91,7 @@ const WhatIBringSection = () => {
               <h4 className="text-xs font-bold text-primary uppercase tracking-wider mb-3 font-mono">{col.title}</h4>
               <ul className="space-y-1.5">
                 {col.items.map((item) => (
-                  <li key={item} className="text-xs text-muted-foreground leading-relaxed hover:text-foreground transition-colors cursor-default">{item}</li>
+                  <li key={item} className="text-xs font-medium text-foreground/80 leading-relaxed hover:text-primary transition-colors cursor-default">{item}</li>
                 ))}
               </ul>
             </div>

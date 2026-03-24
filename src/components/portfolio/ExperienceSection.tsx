@@ -58,13 +58,13 @@ const ExperienceSection = () => {
               </div>
               {/* Stack */}
               <div className="px-5 py-2.5 bg-card/80 border-b border-border">
-                <p className="text-xs text-muted-foreground font-mono leading-relaxed">{exp.stack}</p>
+                <p className="text-xs text-foreground/75 font-mono font-semibold leading-relaxed">{exp.stack}</p>
               </div>
               {/* Highlights */}
               <div className="p-5 bg-card">
                 <ul className="space-y-2.5">
                   {exp.highlights.map((h, j) => (
-                    <li key={j} className="text-sm text-secondary-foreground leading-relaxed pl-5 relative before:content-['▸'] before:absolute before:left-0 before:text-primary before:text-xs before:top-[3px]">
+                    <li key={j} className="text-sm text-foreground/85 leading-relaxed pl-5 relative before:content-['▸'] before:absolute before:left-0 before:text-primary before:text-xs before:top-[3px]">
                       {h}
                     </li>
                   ))}
@@ -74,7 +74,7 @@ const ExperienceSection = () => {
           ))}
 
           {/* Education Header */}
-          <div className={`flex items-center gap-3 mt-16 mb-8 ${isVisible ? "animate-fade-up" : "opacity-0"}`} style={{ animationDelay: `${(experiences.length + 1) * 120}ms` }}>
+          <div className={`flex items-center gap-3 mt-8 md:mt-14 mb-8 ${isVisible ? "animate-fade-up" : "opacity-0"}`} style={{ animationDelay: `${(experiences.length + 1) * 120}ms` }}>
             <GraduationCap className="w-5 h-5 text-primary" />
             <h3 className="text-2xl font-bold tracking-tight">Education</h3>
           </div>
@@ -96,17 +96,17 @@ const ExperienceSection = () => {
             {/* Details */}
             <div className="p-4 sm:p-5 md:p-6 bg-card/50">
               <div className="flex items-start gap-2.5 sm:gap-3 mb-4 sm:mb-5">
-                <MapPin className="w-4 h-4 text-muted-foreground mt-0.5 sm:mt-1 shrink-0" />
+                <MapPin className="w-4 h-4 text-foreground/50 mt-0.5 sm:mt-1 shrink-0" />
                 <div>
-                  <p className="text-sm sm:text-base text-secondary-foreground font-medium leading-snug">J.P. Dawer Institute of Information Science & Technology</p>
-                  <p className="text-[11px] sm:text-xs text-muted-foreground mt-1">Veer Narmad South Gujarat University, Surat</p>
+                  <p className="text-sm sm:text-base text-foreground/85 font-medium leading-snug">J.P. Dawer Institute of Information Science & Technology</p>
+                  <p className="text-[11px] sm:text-xs text-foreground/60 mt-1">Veer Narmad South Gujarat University, Surat</p>
                 </div>
               </div>
 
               {/* GPA bar */}
               <div className="mt-2 sm:mt-4 p-3.5 sm:p-4 rounded-xl bg-secondary/30 border border-border/50">
                 <div className="flex justify-between text-[11px] sm:text-xs mb-2">
-                  <span className="text-muted-foreground font-medium">Academic Performance</span>
+                  <span className="text-foreground/65 font-medium">Academic Performance</span>
                   <span className="text-primary font-mono font-semibold">Strong</span>
                 </div>
                 <div className="h-1.5 sm:h-2 rounded-full bg-secondary overflow-hidden">

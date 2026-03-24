@@ -22,7 +22,7 @@
     --secondary-foreground: 40 10% 80%;
 
     --muted: 220 14% 16%;
-    --muted-foreground: 220 10% 50%;
+    --muted-foreground: 220 10% 75%;
 
     --accent: 38 92% 55%;
     --accent-foreground: 220 20% 7%;
@@ -45,6 +45,46 @@
     --sidebar-border: 220 14% 18%;
     --sidebar-ring: 38 92% 55%;
   }
+
+  /* ─── Light theme ─────────────────────────────── */
+  .light {
+    --background: 40 30% 97%;
+    --foreground: 220 25% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 25% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 12%;
+
+    --primary: 38 92% 42%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 16% 92%;
+    --secondary-foreground: 220 25% 20%;
+
+    --muted: 220 14% 90%;
+    --muted-foreground: 220 14% 38%;
+
+    --accent: 38 92% 42%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 14% 84%;
+    --input: 220 14% 84%;
+    --ring: 38 92% 42%;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 220 25% 12%;
+    --sidebar-primary: 38 92% 42%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 16% 92%;
+    --sidebar-accent-foreground: 220 25% 12%;
+    --sidebar-border: 220 14% 84%;
+    --sidebar-ring: 38 92% 42%;
+  }
 }
 
 @layer base {
@@ -54,6 +94,7 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    transition: background-color 300ms ease, color 300ms ease;
   }
 
   html {
@@ -68,7 +109,7 @@
   }
 
   .section-padding {
-    @apply py-20 md:py-28 px-6 md:px-12;
+    @apply py-12 md:py-24 px-5 md:px-12;
   }
 
   .glow {
