@@ -1,5 +1,5 @@
 import profileImg from "@/assets/profile.jpg";
-import { Github, Linkedin, Mail, MapPin, Phone, Sparkles } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, Phone, Sparkles, Wifi } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const stats = [
@@ -74,6 +74,10 @@ const HeroSection = () => {
               </span>
               <span className="flex items-center gap-1.5">
                 <Phone className="w-4 h-4" /> +91 8401447120
+              </span>
+              <span className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-green-500/10 border border-green-500/30 text-green-400 text-xs font-medium">
+                <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+                <Wifi className="w-3.5 h-3.5" /> Available for Remote Work
               </span>
             </div>
 

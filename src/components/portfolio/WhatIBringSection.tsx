@@ -39,7 +39,7 @@ const techColumns = [
   },
   {
     title: "Backend & APIs",
-    items: ["FastAPI + Pydantic", "Django + DRF", "Flask", "SQLAlchemy + Alembic", "Celery + Redis", "WebSocket", "OpenAPI/Swagger"],
+    items: ["FastAPI + Pydantic", "Django + DRF", "Flask", "SQLAlchemy", "Celery + Redis", "WebSocket", "OpenAPI/Swagger"],
   },
   {
     title: "Infra & Cloud",

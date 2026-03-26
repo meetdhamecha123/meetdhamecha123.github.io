@@ -1,5 +1,5 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { Github, Linkedin, Mail, MapPin, Phone, MessageSquare, Download } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, Phone, MessageSquare, Download, Wifi } from "lucide-react";
 
 const ContactSection = () => {
   const { ref, isVisible } = useScrollReveal();
@@ -16,7 +16,7 @@ const ContactSection = () => {
           </div>
           <h2 className="text-4xl font-bold tracking-tight">Let's Build Something<br /><span className="text-gradient">Amazing Together</span></h2>
           <p className="text-foreground/70 text-lg max-w-lg mx-auto">
-            Open to backend engineering, AI/LLM engineering, and full-stack Python roles. Let's connect and create impactful solutions.
+            Open to backend engineering, AI/LLM engineering, and full-stack Python roles — on-site or remote. Let's connect and create impactful solutions.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 pt-4">
@@ -42,6 +42,10 @@ const ContactSection = () => {
             <span className="flex items-center gap-1.5"><Phone className="w-3.5 h-3.5" /> (+91) 8401447120</span>
             <span className="flex items-center gap-1.5"><Mail className="w-3.5 h-3.5" /> meetdhamecha82@gmail.com</span>
             <span className="flex items-center gap-1.5"><MapPin className="w-3.5 h-3.5" /> Surat, Gujarat, India</span>
+            <span className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-green-500/10 border border-green-500/30 text-green-400 text-xs font-medium">
+              <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+              <Wifi className="w-3.5 h-3.5" /> Available for Remote
+            </span>
           </div>
         </div>
       </div>

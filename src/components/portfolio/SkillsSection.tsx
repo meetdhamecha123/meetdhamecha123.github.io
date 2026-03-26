@@ -26,7 +26,7 @@ const skillGroups = [
   {
     title: "Data Science & ML",
     badgeCls: "bg-emerald-100 border-emerald-300 text-emerald-800 font-semibold dark:bg-emerald-500/25 dark:border-emerald-400/50 dark:text-emerald-200 dark:font-semibold",
-    skills: ["Pandas", "NumPy", "Scikit-learn", "XGBoost", "Matplotlib", "Seaborn", "Plotly", "SHAP", "EDA"],
+    skills: ["Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn", "Plotly"],
   },
   {
     title: "Scraping & Automation",
@@ -36,7 +36,7 @@ const skillGroups = [
   {
     title: "Databases",
     badgeCls: "bg-blue-100 border-blue-300 text-blue-800 font-semibold dark:bg-blue-500/25 dark:border-blue-400/50 dark:text-blue-200 dark:font-semibold",
-    skills: ["PostgreSQL", "MySQL", "SQLite", "Redis", "Alembic"],
+    skills: ["PostgreSQL", "MySQL", "SQLite", "Redis"],
   },
   {
     title: "DevOps & Cloud",

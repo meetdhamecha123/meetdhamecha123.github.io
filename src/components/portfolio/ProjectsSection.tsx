@@ -59,7 +59,7 @@ const projects = [
   {
     num: "10",
     title: "Secure Microservice API",
-    stack: "FastAPI · Celery · Redis · SQLAlchemy · PostgreSQL · Alembic · Pytest · GitLab CI",
+    stack: "FastAPI · Celery · Redis · SQLAlchemy · PostgreSQL · Pytest · GitLab CI",
     desc: "Production FastAPI microservice with OAuth2 + JWT, refresh token rotation, Celery + Redis async tasks, 85%+ test coverage, and dual-database support with zero-downtime migrations.",
   },
   {

@@ -7,7 +7,7 @@ const experiences = [
     company: "TeamOpine Solutions",
     location: "Surat, Gujarat",
     period: "Jan 2025 – Present",
-    stack: "Python · FastAPI · LangChain · LangGraph · RAG · CAG · MCP · Celery · Redis · PostgreSQL · Docker · Gemini API · Claude API · HuggingFace · Qdrant · ChromaDB",
+    stack: "Python · FastAPI · LangChain · LangGraph · RAG · CAG · MCP · Celery · Redis · PostgreSQL · Docker · Gemini API · Claude API · HuggingFace · Qdrant · ChromaDB · Selenium · Pandas",
     highlights: [
       "Developed high-performance FastAPI microservices with role-based authentication, JWT security, Pydantic validation, and Celery + Redis background task processing — reducing endpoint response times by over 60%.",
       "Designed and deployed a multi-document RAG system supporting PDF, DOCX, XLSX, CSV, and image inputs with hybrid vector search (dense + sparse) using Qdrant and ChromaDB. Implemented page-level indexing (PageIndex) — tracking page numbers, section headers, and document metadata per chunk for precise source attribution and page-aware retrieval.",
@@ -15,6 +15,8 @@ const experiences = [
       "Built MCP (Model Context Protocol) servers using FastMCP framework integrating Gemini 2.5-Flash and Claude API with multi-LLM AI agent frameworks unifying OpenRouter, HuggingFace, Gemini, and Claude.",
       "Architected a graph-based multi-agent automation framework using LangGraph and LangChain connected to WhatsApp and Telegram bots — achieving 80% reduction in LLM API spend via local Ollama models.",
       "Integrated Gemini 2.0 Flash Vision for an AI food nutrition prediction backend serving 1,000+ daily requests at sub-800ms average response time; collaborated on Power BI dashboards.",
+      "Designed and deployed advanced web scraping pipelines using Selenium with headless Chrome (anti-detection strategies, proxy rotation, CAPTCHA-handling) targeting 12+ data portals — maintaining 95%+ uptime.",
+      "Automated data transformation and export workflows using Pandas with Celery-powered task queues for fully automated data collection and delivery pipelines without manual intervention.",
     ],
   },
   {
@@ -22,11 +24,11 @@ const experiences = [
     company: "Zerobit Infotech",
     location: "Surat, Gujarat",
     period: "Jul 2024 – Dec 2024",
-    stack: "Python · Django · Django REST Framework · Selenium · BeautifulSoup · PostgreSQL · MySQL · Ubuntu Server · Nginx · n8n · Pandas · Git",
+    stack: "Python · Django · Django REST Framework · FastAPI · Selenium · BeautifulSoup · PostgreSQL · MySQL · Ubuntu Server · Nginx · Git",
     highlights: [
       "Built scalable Django and DRF web applications with JWT authentication, DTO-based handling, schema validation, and optimized PostgreSQL/MySQL integration for multi-tenant workflows.",
-      "Designed and deployed advanced web scraping pipelines using Selenium with headless Chrome (anti-detection strategies, proxy rotation, CAPTCHA-handling) targeting 12+ US-based portals — maintaining 95%+ uptime.",
-      "Automated data transformation and export workflows using Pandas and n8n for fully automated data collection and delivery without manual intervention.",
+      "Developed FastAPI-based REST APIs alongside Django projects — implementing async endpoints, Pydantic data validation, and modular service-layer architecture for clean, maintainable backends.",
+      "Built targeted web scrapers using Selenium (headless Chrome) and BeautifulSoup to extract and clean structured data from multiple US-based portals, automating previously manual data gathering tasks.",
       "Deployed and managed production applications on Ubuntu servers with Nginx reverse proxy, Gunicorn WSGI, and PostgreSQL connection pooling.",
     ],
   },
