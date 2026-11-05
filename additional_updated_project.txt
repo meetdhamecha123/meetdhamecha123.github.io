@@ -1,0 +1,253 @@
+1] aivana ai developer project 
+
+Aivana AI Studio — Multi-Model AI Developer Platform
+Client project · Sattvam Soft (Python Developer, May 2026 – Present) · developers.aivana.ai
+
+Built the developer platform for a multi-model AI API: one endpoint that routes each request across multiple LLMs and returns one combined answer, with standard and SSE streaming endpoints.
+Built API key management: keys shown only once, live/test prefixes, masking, rename, instant revocation and per-key usage tracking.
+Built prepaid token billing: promotional tokens spent before paid credit, credit expiry, Stripe payments with auto-reload, and per-key daily/weekly/monthly spend limits.
+Built workspace rate limiting (requests/min, tokens/min, concurrency) that returns 429 with Retry-After, never charging for rejected or failed requests.
+Built the Usage & Insights dashboard: P50/P95 latency, routing mix, per-key run history and a savings estimate against frontier-model pricing.
+Added multimodal input: PDFs with page citations, DOCX, CSV and images, plus a web search switch, validated JSON Schema output and an Intelligence Trace.
+Shipped Python and Node.js SDKs, a CLI, a 20+ page docs site and an interactive Playground that exports code as cURL, Python or Node.js.
+
+
+=====================================================================================================================================================================================
+
+2] KathaToon AI — AI-Powered Kids’ Story-to-Song Video Generation Platform
+
+**Tech Stack:** Python, FastAPI, React.js, Gemini Flash LLM, Gemini Flash Image, Gemini Omni Flash, Suno API, Google Cloud Storage (GCS), PostgreSQL, Redis, Celery, FFmpeg, YouTube Data API v3, Docker.
+
+**Project Description:**
+
+Developing an end-to-end AI-powered content creation and publishing platform that transforms nursery rhymes, children’s story ideas, and user-selected story cards into original stories, song lyrics, AI-generated music, consistent character illustrations, animated video scenes, and complete 3–5-minute YouTube videos. The platform also automatically analyzes each finished video to identify the best moments and generates two engaging, vertical short-form clips for YouTube Shorts.
+
+**Key Features & Responsibilities:**
+
+- **AI Story & Lyrics Generation:** Leveraging Gemini Flash LLM to expand simple story ideas, such as “Machli Jal Ki Rani Hai,” into complete children’s stories song, original song lyrics, structured storyboards, scene descriptions, and music-generation prompts, with support for different languages, themes, age groups, and storytelling styles.
+
+- **AI Song Generation:** Integrating the Suno API to transform generated lyrics and musical style prompts into complete songs, with configurable genres, moods, vocal styles, and language preferences.
+
+- **Character Consistency & Image Generation:** Using Gemini Flash Image to create reusable character reference images, detailed character descriptions, visual styles, backgrounds, and scene illustrations while maintaining character appearance and visual continuity across the story.
+
+- **AI Video Scene Generation:** Integrating Gemini Omni Flash for image-guided video generation, converting structured story scenes and generated illustrations into individual video clips with dynamic prompts, consistent visual elements, and scene-specific actions.
+
+- **Automated Video Composition:** Developing an FFmpeg-based rendering pipeline to combine generated scenes, AI-generated music, transitions, synchronized lyrics, subtitles, and visual effects into complete 3–5-minute MP4 videos with configurable aspect ratios and output quality.
+
+- **Automated Highlight & YouTube Shorts Generation:** Implementing an AI-powered video analysis pipeline to identify engaging moments, memorable lyrics, story highlights, emotional peaks, and visually interesting scenes from the finished video. Automatically selecting the two strongest short-form segments and generating two vertical 9:16 clips with intelligent cropping, reframing, captions, and background-audio synchronization, optimized for YouTube Shorts.
+
+- **Google Cloud Storage Bucket Management:** Integrating Google Cloud Storage to organize and persist all generated assets using structured bucket and object-prefix conventions, separating story data, prompts, character references, scene images, audio tracks, intermediate video clips, final videos, thumbnails, and generated Shorts. Implementing project-level asset organization, object metadata, access controls, signed URLs, lifecycle-based storage cleanup, and database-backed asset references for reliable retrieval and management.
+
+- **YouTube Upload, Scheduling & Rescheduling:** Integrating YouTube Data API v3 with OAuth 2.0 to upload completed videos and Shorts, generate titles, descriptions, tags, and thumbnail assets, configure privacy settings, and manage publishing workflows. Implementing scheduled publishing with configurable dates and times, rescheduling of eligible private videos, upload progress tracking, upload retry handling, and publishing-status synchronization.
+
+- **Asynchronous Workflow Orchestration:** Building a distributed background-processing pipeline using FastAPI, Celery, Redis, and PostgreSQL to coordinate story generation, song creation, scene rendering, video assembly, Shorts generation, and YouTube uploads. Persisting workflow state and implementing retry mechanisms, failure recovery, resumable processing, and task-level execution tracking.
+
+- **Real-Time Job & Scene Monitoring:** Developing a React-based dashboard that displays overall video-generation progress, individual scene statuses, song-generation progress, video-rendering stages, Shorts-generation status, cloud-storage operations, and YouTube publishing states. Persisting job and scene statuses in PostgreSQL so that refreshing the frontend restores the latest processing state without losing progress.
+
+- **Cloud Infrastructure & Security:** Configuring Google Cloud service-account permissions and secure backend authentication, separating credentials from frontend code, managing cloud asset access, and maintaining structured logs, error details, and processing metadata for production-ready operations.
+
+- **Content Quality & Reliability:** Incorporating age-appropriate content validation, visual consistency checks, generated-asset verification, configurable quality checks, processing logs, and generation-cost tracking to improve output quality, reliability, and operational efficiency.
+
+
+=================================================================================================================================================================================
+
+3] Synapse — Verified AI Data Workspace
+ Personal project · built solo, backend to frontend · Apr 2026 – present
+
+One-line description
+An AI workspace where you ask your databases and documents questions in plain English. It checks every number a second, independent way before you see it, charts the result, and sends it to Slack, Gmail or Drive.
+
+Project description (short, for resume)
+A production AI agent that converts natural language into SQL across SQLite, MySQL and CSV/Parquet in one query using DuckDB. A trust layer re-checks each answer with independent queries and labels it Verified, Verified with caveats, or Don't trust this yet. It also builds verified dashboards, does document Q&A with page citations and runs deep web research. It has 47 actions across Gmail, Drive, Docs, Sheets and Slack, and nothing is sent or changed without the user's approval.
+
+Project description (long, for portfolio)
+AI tools that write SQL usually fail without any warning. A JOIN can double-count rows and inflate revenue, or orders with no matching customer can quietly drop out of a total. Synapse is built around catching those mistakes. It answers questions over your existing databases and files without a data warehouse. It then re-checks the headline number a second, independent way and tells you plainly when not to trust it. From there it builds charts and dashboards and delivers them where the decision happens, in Slack, Gmail or Drive. A confirmation step sits in front of anything that sends, writes or deletes.
+
+Tech stack
+Layer	Technologies
+Backend	Python, FastAPI (async), SSE streaming, WebSockets, SQLAlchemy, Alembic
+AI agents	LangGraph (think → act → observe loop), MCP-style tool layer, intent classification, model routing per question
+LLM providers	Anthropic Claude, Gemini, Groq, OpenRouter, NVIDIA, AWS Bedrock, behind one gateway with a key pool, circuit breakers and automatic failover
+Data	DuckDB (combines SQLite + MySQL + CSV/Parquet in one query), sqlparse
+Retrieval	Qdrant hybrid search (dense all-MiniLM-L6-v2 + sparse BM25 with RRF), cross-encoder reranking, BM25 page index
+Queue / cache	ARQ workers + Redis
+Research	Tavily, Exa, Firecrawl
+Integrations	Google OAuth (Gmail, Drive, Docs, Sheets), Slack API
+Frontend	React 18, TypeScript, Vite, MUI, ECharts, React Query, Zustand
+Security	Fernet-encrypted credentials, bcrypt + JWT login, rate limiting, audit log
+Deployment	Docker Compose, AWS EC2 (backend), AWS Amplify (frontend), Cloudflare Tunnel
+Key features
+NL2SQL across data sources. Combine SQLite, MySQL and CSV/Parquet in one statement through DuckDB. Schema linking shows the model real example values from each column. On large schemas, a retrieval pass picks only the relevant tables.
+Trust layer. After answering, Synapse runs a second, independent set of checks:
+Metric resolution: was the metric taken from the defined glossary or guessed from a column name?
+Cross-source reconciliation: the total is calculated a second way, and the answer is blocked if the two disagree.
+Fan-out and completeness: orphan or duplicate rows are reported with the row count and their effect on the total.
+Safe writes. INSERT, UPDATE, DELETE and DDL statements are classified by rules using sqlparse, not by the model. Destructive SQL pauses the agent and shows the exact SQL, the risk level and the estimated number of affected rows. High-risk operations require typing a keyword to confirm.
+Governed semantic layer. A business glossary plus certified metrics, so a term like "Net Revenue" is defined once and calculated the same way every time. Every query is written to an audit trail.
+Charts with a critic. The chart type is chosen from the shape of the data. A second "critic" stage rejects misleading visuals, such as a pie chart of long-tailed data or an ID column charted as a measure.
+Dashboards.
+Every query result gets an automatic mini-dashboard.
+Asking for a whole-database overview makes the LLM plan the questions; each panel is a real, checked query.
+A 2D/3D Chart Studio for manual exploration.
+Pixel-perfect PDF export of what's on screen.
+AI agent with 47 actions. Connected to Gmail, Drive, Docs, Sheets and Slack, so one sentence can run a whole workflow: query → verify → chart → PDF → post to Slack. Anything that sends or changes something needs human approval. Before the agent can say "done", a verifier confirms the API call actually happened.
+Document RAG.
+Upload PDF, DOCX, XLSX, PPTX, CSV, images and more, up to 100 MB each.
+Hybrid search with reranking.
+Strict per-document isolation: only the documents you tick are searched.
+Citations jump to the source page.
+A different retrieval strategy for each type of question.
+Live ingestion progress over WebSocket.
+Deep research and scraping. The loop runs plan → parallel search (Tavily + Exa) → full-page read (Firecrawl) → critic loop → answer with citations. Scraped websites become spreadsheets that are automatically registered as data sources you can query.
+Production reliability.
+Background ingestion on a queue.
+A self-healing index: documents marked as indexed but holding no vectors are re-ingested on startup.
+Encrypted credentials and per-key cooldowns.
+An evaluation harness that scores SQL by whether its results match, not by comparing text.
+Responsibilities (solo project)
+Designed the architecture and built every layer myself: the FastAPI backend, the LangGraph agent, retrieval, integrations, the React frontend and deployment.
+Designed the trust layer and the confirmation gate for safe writes.
+Built the multi-provider LLM gateway with failover and per-question model routing.
+Profiled and fixed the main performance bottlenecks (see results below).
+Deployed on AWS (EC2 + Amplify) with Docker Compose. Wrote 89 tests and an evaluation harness.
+Measured results
+Before	After
+Retrieval latency	27.1 s	3.7 s (7× faster)
+Time to first token	29.0 s	12.9 s
+Fully verified database answer	~60 s	~14 s
+Groundedness (share of claims backed by the source)	0.00	0.92
+The retrieval speedup came from reranking the merged results once instead of once per sub-query. The reranker had been running 5–11 times per question, and about 80% of that work was being thrown away.
+
+========================================================================================================================================================================================
+4] switchboard_ai free api subscription api 
+Switchboard AI — Local Multi-Model LLM Gateway
+Personal open-source project · built solo · Sep 2026 · Python, FastAPI
+
+One-line description
+A local, OpenAI-compatible API gateway that puts 17 LLMs (Claude, Gemini, GPT-OSS) behind one address. It routes each request to the best-value model, falls back automatically when a model fails, and lets you stream, run multiple models on one question, or run agent tasks. All of this goes through one API.
+
+Project description (short, for resume)
+A FastAPI server that puts the official Claude Code and Antigravity CLIs behind one OpenAI-compatible REST API. It offers 29 model options (17 distinct LLMs) and smart routing across them. A pool of already-running CLI processes keeps replies fast, answers stream live, failing models are swapped out automatically, and agent tasks can work on local files. Existing OpenAI SDK code works by changing only the base URL.
+
+Project description (long, for portfolio)
+Every AI provider has its own API, its own format and its own failure modes. Teams also tend to send every request, even a greeting, to the most expensive flagship model. Switchboard sits between the application and the models as a single gateway. Clients send one standard OpenAI-format request. Switchboard classifies the task, picks the model and how much "thinking" it gets, and switches to the next candidate if a model is rate-limited or down. Every response reports its tokens and cost. Under the hood it manages long-running CLI processes, converts each provider's output into one common event stream, and protects the local server against cross-site and DNS-rebinding attacks.
+
+Tech stack
+Layer	Technologies
+Backend	Python, FastAPI, asyncio, Server-Sent Events, Pydantic, .env config
+LLM providers	Claude Code CLI (12 Claude models), Antigravity CLI (Gemini 3.x, GPT-OSS 120B), optional Anthropic API (pay per token)
+API compatibility	OpenAI-compatible /v1/chat/completions and /v1/models
+Process management	Subprocess pool exchanging JSON over stdin/stdout, already-running spare processes, a concurrency queue, crash recovery
+Auth automation	Hidden-terminal driving with pyte for Google OAuth sign-in from the web UI
+Frontend	A self-contained web chat UI (HTML/JS) with model picker, status page and cost details
+Deployment	Docker, docker-compose, an AWS EC2 install script with systemd, CloudFront keep-alive for long streams; runs on Linux, macOS and Windows
+Key features
+One OpenAI-compatible API
+29 model options covering 17 distinct LLMs: 12 Anthropic, 4 Google and 1 OpenAI.
+Existing OpenAI SDK code works by switching the base URL to localhost:8000/v1.
+Smart routing with three Auto modes
+auto classifies each request into one of 7 types (chat, writing, creative, code, reasoning, research, long), scores its difficulty from 1 to 5, and picks the model and thinking level. It falls back through up to 3 candidates if one fails.
+auto-orchestrate plans, splits the task into 2–5 subtasks that run in parallel, has a model from a different family review the results, then writes the answer.
+auto-ensemble gets independent answers from Claude, Gemini and GPT-OSS and merges them.
+Already-running processes for fast replies
+One CLI process per conversation, so only new messages are sent.
+Spare processes are pre-started and refreshed every 30 minutes.
+Idle conversations are closed after 15 minutes.
+Concurrency is capped (6 Claude / 4 Gemini requests at once) with a queue for the rest.
+A crashed process is replaced and the conversation is replayed, so nothing is lost.
+Streaming
+Server-Sent Events with one common event format: session, text, tool_use, tool_result, notice, result, done.
+A 25 ms pacing layer evens out bursty output so text flows smoothly.
+Keep-alive pings stop AWS CloudFront from cutting off long answers.
+Automatic failover. Rate limits (429) and "no capacity" errors (503) switch to the next model with no error shown to the user. Errors that happen after part of the answer has already streamed show a warning instead.
+Agent mode for local files.
+Tasks run inside one approved folder, with an allowlist of tools.
+Shell commands are off by default.
+Each tool step streams live, and a task can be resumed later.
+Web UI. Chat, a model picker, account and quota status, cost details per response, and Google sign-in done entirely in the browser.
+Security
+Listens on 127.0.0.1 only by default.
+Blocks requests from other origins and from unknown host names (protection against DNS rebinding).
+Optional Bearer API key.
+Agent file access is limited to approved folders.
+Credentials stay in the official CLIs' own stores, never in Switchboard.
+Works across platforms. Automatically finds the CLIs (newest version wins) on Windows, macOS and Linux. A first-run installer and one-command deploy to EC2 are included.
+Responsibilities (solo project)
+Designed and built the full system: the FastAPI server (29 routes), the provider layer and its common event format, the routing and orchestration engines, the process pool, the streaming pipeline, the web UI and deployment scripts.
+Built and ran the test harness that benchmarked all 29 model options.
+Wrote the documentation (a 57 KB README with architecture and workflow diagrams) and released the project as MIT open source.
+Measured results (from your test runs)
+Result
+Models available through one API	29 options / 17 LLMs; 27 of 29 work on Claude Pro + Google AI Pro
+Test prompts answered correctly	270 / 270
+Cost per request, Auto vs. always using a flagship model	~$0.004 vs ~$0.03 (up to ~7× cheaper)
+Typical latency	Claude ~2–5 s, Gemini ~10–30 s
+Failover	Verified: requests continue when a model is unavailable
+
+
+============================================================================================================================================================================================
+
+5] ## Pixtura — AI-Powered Product Photography & Virtual Model Generation Platform
+
+**Tech Stack:** React.js, Python, MongoDB, AWS Lambda, Gemini Image Generation APIs, Gemini 3.1 Flash Image, Azure-hosted GPT-based Image Generation API.
+
+**Project Description:**
+
+Developed an AI-powered product photography platform that transforms a single uploaded product image into professional e-commerce visuals, including AI-generated model shoots, product-background compositions, and multiple styling variations through an intelligent, guided generation workflow.
+
+**Key Features & Responsibilities:**
+
+- **AI-Powered Product Analysis:** Implemented an automated image-analysis workflow to identify product characteristics, category, visual attributes, and relevant presentation requirements, enabling personalized image-generation recommendations.
+
+- **Intelligent Model & Pose Recommendations:** Built an AI-driven recommendation engine that automatically suggests suitable virtual models based on gender, age group, appearance, and product category, along with relevant poses and product-interaction scenarios.
+
+- **Automated Background & Style Selection:** Developed contextual recommendations for backgrounds, themes, lighting, environments, and visual styles based on product attributes, enabling relevant and visually consistent commercial photography.
+
+- **Interactive AI Recommendation Cards:** Designed a guided React.js workflow with dynamically generated preview cards for recommended models, alternative poses, product positions, and background styles. Enabled users to review and customize AI-selected options before final image generation.
+
+- **Multi-Model Image Generation:** Integrated Gemini image-generation models, including Gemini 3.1 Flash Image, and an Azure-hosted GPT-based image-generation API to generate realistic product imagery, virtual model shoots, and customized background compositions.
+
+- **Dynamic Prompt Engineering:** Engineered context-aware prompt generation using product analysis, selected model attributes, poses, backgrounds, lighting, and custom instructions to produce tailored image-generation requests for different product categories and photography scenarios.
+
+- **Multiple Image Variations:** Implemented support for generating multiple product-image variations across different model poses, visual styles, backgrounds, and presentation angles to support e-commerce catalogs and marketing assets.
+
+- **Product Background Generation:** Developed a dedicated generation workflow for removing or replacing product backgrounds and creating customized scenes while emphasizing product visibility and presentation quality.
+
+- **Serverless Backend Architecture:** Built Python-based backend workflows using AWS Lambda for scalable execution of image-analysis, recommendation, and generation tasks, with MongoDB for persisting user data, generation history, selected configurations, and output metadata.
+
+- **Generation Dashboard & Asset Management:** Developed a React-based dashboard for browsing generated images, reviewing generation history, downloading outputs, managing collections, and accessing image-editing workflows.
+
+- **Bulk Image Generation:** Implemented bulk-generation capabilities for creating and managing multiple product-image variations, with generation-history tracking and output management.
+
+- **Custom Image Editing:** Integrated an image-editing workflow that supports custom instructions and AI-powered image modifications to refine generated product photography.
+
+- **Credit-Based Usage Tracking:** Implemented a credit-based generation workflow to track usage and support controlled access to image-generation functionality.
+
+- **User Experience & Workflow Optimization:** Built a multi-step guided interface covering product upload, generation mode selection, AI-recommended models, pose selection, background selection, final review, and image generation, reducing manual prompt engineering and simplifying the product-photography workflow.
+
+============================================================================================================================================================================================
+
+6] 
+## Cost-Optimized AI Video Upscaling Pipeline — 720p to 1080p
+
+**Tech Stack:** Python, OpenCV, Real-ESRGAN (`realesr-general-x4v3`), PyTorch, FFmpeg, GPU-Accelerated Processing.
+
+**Project Description:**
+
+Engineered a cost-optimized AI video enhancement pipeline that generates videos at 720p to reduce expensive AI video-generation costs, then upscales them to 1080p using Real-ESRGAN to enhance perceived sharpness, textures, and visual details while preserving the original audio.
+
+**Key Features & Responsibilities:**
+
+- **AI Video Cost Optimization:** Designed a two-stage video-processing workflow that combines lower-resolution AI video generation with AI-powered upscaling, targeting an estimated **40–60% reduction in video-generation costs** compared with direct 1080p generation.
+
+- **Deep Learning-Based Upscaling:** Integrated Real-ESRGAN (`realesr-general-x4v3`) to reconstruct image details, improve edge sharpness, and enhance textures in AI-generated video frames beyond conventional interpolation methods.
+
+- **Memory-Efficient Streaming Pipeline:** Built a Python and OpenCV processing pipeline that streams video frames directly into the enhancement workflow, avoiding unnecessary intermediate PNG files and reducing disk I/O overhead.
+
+- **Optimized FFmpeg Integration:** Connected Python-based frame processing to FFmpeg through standard input/output pipes for efficient video reconstruction, encoding, and preservation of the original audio track.
+
+- **GPU Memory Optimization:** Leveraged FP16 half-precision inference where supported to reduce GPU memory consumption and improve processing efficiency.
+
+- **Intelligent Frame Tiling:** Implemented configurable smart tiling to process high-resolution frames within GPU memory constraints, mitigating out-of-memory errors without relying on unnecessarily aggressive automatic tiling.
+
+- **Automated Video Reconstruction:** Developed an end-to-end workflow for frame extraction, AI enhancement, resizing, video encoding, and final output generation with configurable quality and performance settings.

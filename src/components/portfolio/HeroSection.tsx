@@ -3,7 +3,7 @@ import { Github, Linkedin, Mail, MapPin, Phone, Sparkles, Wifi } from "lucide-re
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const stats = [
-  { value: "14", label: "Production Projects" },
+  { value: "20", label: "Projects Built" },
   { value: "2+", label: "Years Experience" },
   { value: "80%", label: "LLM Cost Saved" },
   { value: "100×", label: "Query Speedup" },

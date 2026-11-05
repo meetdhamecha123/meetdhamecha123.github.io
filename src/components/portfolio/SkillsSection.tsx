@@ -44,6 +44,11 @@ const skillGroups = [
     skills: ["Docker", "Kubernetes", "AWS EC2/S3/RDS", "GitHub Actions", "GitLab CI", "Nginx", "Gunicorn"],
   },
   {
+    title: "Generative Media & Cloud",
+    badgeCls: "bg-purple-100 border-purple-300 text-purple-800 font-semibold dark:bg-purple-500/25 dark:border-purple-400/50 dark:text-purple-200 dark:font-semibold",
+    skills: ["Gemini Image / Omni Flash", "Suno API", "Azure GPT Image", "FFmpeg", "Real-ESRGAN", "PyTorch", "OpenCV", "Google Cloud Storage", "AWS Lambda", "YouTube Data API v3", "MongoDB", "DuckDB", "Stripe"],
+  },
+  {
     title: "BI, Tools & Practices",
     badgeCls: "bg-emerald-100 border-emerald-300 text-emerald-800 font-semibold dark:bg-emerald-500/25 dark:border-emerald-400/50 dark:text-emerald-200 dark:font-semibold",
     skills: ["Power BI", "DAX", "Chart.js", "D3.js", "Git", "Celery", "WebSocket", "Postman", "Pytest"],

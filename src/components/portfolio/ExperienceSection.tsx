@@ -3,10 +3,24 @@ import { Briefcase, GraduationCap, Calendar, MapPin, Award } from "lucide-react"
 
 const experiences = [
   {
-    title: "Backend Developer",
+    title: "Python Developer",
+    company: "Sattvam Soft",
+    location: "Surat, Gujarat · On-site",
+    period: "May 2026 – Present",
+    stack: "Python · FastAPI · React.js · Gemini (Flash LLM, Flash Image, Omni Flash) · Suno API · Azure GPT Image API · Stripe · Celery · Redis · PostgreSQL · MongoDB · Google Cloud Storage · AWS Lambda · YouTube Data API v3 · FFmpeg · Real-ESRGAN · PyTorch · OpenCV · Docker",
+    highlights: [
+      "Aivana AI Studio — developer platform for a multi-model AI API (developers.aivana.ai): API keys, prepaid billing, rate limiting, usage insights, SDKs, CLI and docs.",
+      "KathaToon AI (in development) — pipeline that turns a children's story idea into lyrics, music, illustrated scenes, a 3–5-minute YouTube video and two Shorts, then schedules the uploads.",
+      "Pixtura — AI product-photography platform that turns one product photo into virtual model shoots, new backgrounds and style variations.",
+      "AI video upscaling — 720p → 1080p Real-ESRGAN pipeline that cuts video-generation cost.",
+      "Full write-ups for all four are under Client Projects in the Projects section.",
+    ],
+  },
+  {
+    title: "Python Developer",
     company: "TeamOpine Solutions",
     location: "Surat, Gujarat",
-    period: "Jan 2025 – Present",
+    period: "Jan 2025 – May 2026",
     stack: "Python · FastAPI · LangChain · LangGraph · RAG · CAG · MCP · Celery · Redis · PostgreSQL · Docker · Gemini API · Claude API · HuggingFace · Qdrant · ChromaDB · Selenium · Pandas",
     highlights: [
       "Developed high-performance FastAPI microservices with role-based authentication, JWT security, Pydantic validation, and Celery + Redis background task processing — reducing endpoint response times by over 60%.",
