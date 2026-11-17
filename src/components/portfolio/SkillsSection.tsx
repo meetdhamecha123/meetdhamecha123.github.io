@@ -36,7 +36,7 @@ const skillGroups = [
   {
     title: "Databases",
     badgeCls: "bg-blue-100 border-blue-300 text-blue-800 font-semibold dark:bg-blue-500/25 dark:border-blue-400/50 dark:text-blue-200 dark:font-semibold",
-    skills: ["PostgreSQL", "MySQL", "SQLite", "Redis"],
+    skills: ["PostgreSQL", "MySQL", "SQLite", "Redis", "DynamoDB"],
   },
   {
     title: "DevOps & Cloud",

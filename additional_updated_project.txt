@@ -246,7 +246,7 @@ Engineered a cost-optimized AI video enhancement pipeline that generates videos 
 
 - **Optimized FFmpeg Integration:** Connected Python-based frame processing to FFmpeg through standard input/output pipes for efficient video reconstruction, encoding, and preservation of the original audio track.
 
-- **GPU Memory Optimization:** Leveraged FP16 half-precision inference where supported to reduce GPU memory consumption and improve processing efficiency.
+- **GPU Memory Optim  ization:** Leveraged FP16 half-precision inference where supported to reduce GPU memory consumption and improve processing efficiency.
 
 - **Intelligent Frame Tiling:** Implemented configurable smart tiling to process high-resolution frames within GPU memory constraints, mitigating out-of-memory errors without relying on unnecessarily aggressive automatic tiling.
 

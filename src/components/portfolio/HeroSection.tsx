@@ -41,17 +41,18 @@ const HeroSection = () => {
           {/* Left content */}
           <div className="space-y-6 order-2 md:order-1">
             <div className={`space-y-4 ${isVisible ? "animate-fade-up" : "opacity-0"}`}>
-              <div className="flex items-center gap-2">
-                <Sparkles className="w-4 h-4 text-primary" />
-                <p className="font-mono text-sm tracking-widest uppercase text-primary">
-                  Python Full-Stack & AI/LLM Engineer
+              <div className="flex items-start gap-2">
+                <Sparkles className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                <p className="font-mono text-sm tracking-widest uppercase text-primary leading-relaxed">
+                  Python Backend & AI Engineer <span className="text-primary/40">|</span> LLM Systems{" "}
+                  <span className="text-primary/40">|</span> AI Agents <span className="text-primary/40">|</span> Generative AI
                 </p>
               </div>
               <h1 className="text-5xl md:text-7xl font-bold leading-[0.95] tracking-tight">
                 Meet<br />Dhamecha
               </h1>
               <p className="text-foreground/70 max-w-lg text-base md:text-lg leading-relaxed mt-4">
-                Results-driven <span className="text-foreground font-medium">Python Backend & AI Systems Developer</span> building scalable REST APIs, intelligent automation pipelines, and production-grade LLM-powered applications. Specializing in <span className="text-primary font-medium">RAG systems</span>, <span className="text-primary font-medium">multi-agent frameworks</span>, and <span className="text-primary font-medium">MCP architecture</span>.
+                Results-driven <span className="text-foreground font-medium">Python Backend & AI Engineer</span> building scalable REST APIs, intelligent automation pipelines, and production-grade LLM-powered applications. Specializing in <span className="text-primary font-medium">RAG systems</span>, <span className="text-primary font-medium">multi-agent frameworks</span>, and <span className="text-primary font-medium">MCP architecture</span>.
               </p>
             </div>
 

@@ -36,6 +36,7 @@ export const caseStudies: CaseStudy[] = [
     tagline: "Multi-Model AI Developer Platform",
     meta: "May 2026 – Present",
     links: [{ label: "developers.aivana.ai", href: "https://developers.aivana.ai" }],
+    stack: [{ items: ["Amazon DynamoDB", "Stripe", "SSE streaming", "Python & Node.js SDKs", "CLI"] }],
     description:
       "A developer platform for a multi-model AI API: one endpoint that routes each request across multiple LLMs and returns one combined answer, with standard and SSE streaming endpoints.",
     features: [
@@ -70,7 +71,6 @@ export const caseStudies: CaseStudy[] = [
     kind: "client",
     title: "KathaToon AI",
     tagline: "AI-Powered Kids' Story-to-Song Video Generation Platform",
-    status: "In development",
     description:
       "An end-to-end AI content creation and publishing platform that transforms nursery rhymes, children's story ideas and user-selected story cards into original stories, song lyrics, AI-generated music, consistent character illustrations, animated video scenes and complete 3–5-minute YouTube videos. Each finished video is then analysed automatically to find its best moments and produce two engaging vertical clips for YouTube Shorts.",
     stack: [
