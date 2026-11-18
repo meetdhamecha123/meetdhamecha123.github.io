@@ -34,7 +34,7 @@ export const caseStudies: CaseStudy[] = [
     kind: "client",
     title: "Aivana AI Studio",
     tagline: "Multi-Model AI Developer Platform",
-    meta: "May 2026 – Present",
+    meta: "May 2026 – Oct 2026",
     links: [{ label: "developers.aivana.ai", href: "https://developers.aivana.ai" }],
     stack: [{ items: ["Amazon DynamoDB", "Stripe", "SSE streaming", "Python & Node.js SDKs", "CLI"] }],
     description:
@@ -270,7 +270,7 @@ export const caseStudies: CaseStudy[] = [
     kind: "personal",
     title: "Synapse",
     tagline: "Verified AI Data Workspace",
-    meta: "Apr 2026 – Present",
+    meta: "Apr 2026 – Aug 2026",
     links: [{ label: "LinkedIn post", href: "https://lnkd.in/p/dRrSVznf" }],
     description:
       "Ask your databases and documents questions in plain English. AI tools that write SQL usually fail without warning — a JOIN double-counts rows and inflates revenue, or orders with no matching customer quietly drop out of a total. Synapse is built around catching those mistakes: it answers over your existing databases and files without a data warehouse, re-checks the headline number a second, independent way and says plainly when not to trust it, then builds charts and dashboards and delivers them to Slack, Gmail or Drive. A confirmation step sits in front of anything that sends, writes or deletes.",

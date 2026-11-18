@@ -6,7 +6,7 @@ const experiences = [
     title: "Python Developer",
     company: "Sattvam Soft",
     location: "Surat, Gujarat · On-site",
-    period: "May 2026 – Present",
+    period: "May 2026 – Oct 2026",
     stack: "Python · FastAPI · React.js · Gemini (Flash LLM, Flash Image, Omni Flash) · Suno API · Azure GPT Image API · Stripe · Celery · Redis · PostgreSQL · MongoDB · DynamoDB · Google Cloud Storage · AWS Lambda · YouTube Data API v3 · FFmpeg · Real-ESRGAN · PyTorch · OpenCV · Docker",
     highlights: [
       "Aivana AI Studio — developer platform for a multi-model AI API (developers.aivana.ai): API keys, prepaid billing, rate limiting, usage insights, SDKs, CLI and docs.",
